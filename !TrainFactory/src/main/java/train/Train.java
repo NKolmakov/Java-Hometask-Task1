@@ -10,14 +10,13 @@ import java.util.List;
 
 public class Train implements PassengerTrain {
    public Locomotive locomotive;
-   List<Wagon> wagons;
+   List<Wagon> wagons = new ArrayList<>();
     private int commonPassengerAmount;
     private int commonLuggageAmount;
 
 
-    public Train(){
-        this.locomotive = new Locomotive(100);
-        wagons = new ArrayList<>(locomotive.getTractionPower()); //wagons
+    public Train(Locomotive locomotive){
+        this.locomotive = locomotive;
     }
 
 
@@ -63,11 +62,19 @@ public class Train implements PassengerTrain {
     }
 
     public void addWagon(Wagon wagon){
-        wagons.add(wagon);
+        if (wagons.size()+1 <= locomotive.getTractionPower()) {
+            wagons.add(wagon);
+        }else{
+            throw new RuntimeException("Can't add wagon! Locomotive traction power allows contain"+locomotive.getTractionPower()+"wagons");
+        }
     }
 
     public void removeWagon(Wagon wagon){
-        wagons.remove(wagon);
+        if (wagons.size() > 0) {
+            wagons.remove(wagon);
+        } else {
+            throw new RuntimeException("train doesn't contain any wagons!");
+        }
     }
 
     public void getWagons(){
@@ -76,20 +83,19 @@ public class Train implements PassengerTrain {
         }
     }
 
-    public List<Wagon> findByPassengerAmount(int minRange, int maxRange, java.awt.List list){
-        List<Wagon> findedWagons = new ArrayList<Wagon>();
+    public List<Wagon> findByPassengerAmount(int minRange, int maxRange, List<Wagon> list4FindedWagons){
 
         if (minRange >=0 && maxRange>=1) {
             for(Wagon wagon:wagons){
                 if(wagon.getAmountOfPassengers()>=minRange && wagon.getAmountOfPassengers()<=maxRange){
-                    findedWagons.add(wagon);
+                    list4FindedWagons.add(wagon);
                 }
             }
         } else {
             throw new IllegalArgumentException("Illegal type of values! Range must be at least from 0 to 1");
         }
 
-        return findedWagons;
+        return list4FindedWagons;
 
     }
 }

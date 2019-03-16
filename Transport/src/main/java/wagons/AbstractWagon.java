@@ -4,6 +4,8 @@ import interfaces.Wagon;
 
 public abstract class AbstractWagon {
     int number;
+    String type;
+    int convenience;
     int amountOfSeats;
     int amountOfPassengers;
     int amountOfLuggage;
@@ -18,7 +20,7 @@ public abstract class AbstractWagon {
     }
 
     public int getLuggageCapacity() {
-        return 0;
+        return luggageCapacity;
     }
 
 
@@ -28,39 +30,34 @@ public abstract class AbstractWagon {
 
 
     public int getAmountOfSeats() {
-        return 0;
+        return amountOfSeats;
     }
 
 
     public int getAmountOfPassengers() {
-        return 0;
+        return amountOfPassengers;
     }
 
 
     public int getAmountOfLuggage() {
-        return 0;
+        return amountOfLuggage;
     }
 
 
     public int getConvenience() {
-        return 0;
+        return convenience;
     }
 
 
     public String getType() {
-        return null;
-    }
-
-
-    public void setNumber(int number) {
-
+        return type;
     }
 
 
     public void setAmountOfLuggage(int amountOfLuggage) {
-        if (amountOfLuggage >= 0){
+        if (amountOfLuggage >= 0 && this.amountOfLuggage+amountOfLuggage <= luggageCapacity){
             this.amountOfLuggage = amountOfLuggage;
-        } else throw new IllegalArgumentException("");
+        } else throw new IllegalArgumentException("Luggage amount must be greater than 0");
     }
 
 

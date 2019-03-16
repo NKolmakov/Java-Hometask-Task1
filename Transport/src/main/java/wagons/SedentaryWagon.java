@@ -62,4 +62,24 @@ public class SedentaryWagon extends AbstractWagon implements Wagon {
     public String getType() {
         return null;
     }
+
+    @Override
+    public void setNumber(int number) {
+
+    }
+
+    @Override
+    public void setAmountOfLuggage(int amountOfLuggage) {
+
+    }
+
+    @Override
+    public void setAmountOfPassengers(int amountOfPassengers) {
+
+    }
+
+    @Override
+    public void setAmountOfSeats(int amountOfSeats) {
+
+    }
 }

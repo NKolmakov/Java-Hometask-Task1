@@ -23,11 +23,11 @@ public interface Wagon {
 
      String getType();
 
-//     void setNumber(int number);
-//
-//     void setAmountOfLuggage(int amountOfLuggage);
-//
-//     void setAmountOfPassengers(int amountOfPassengers);
-//
-//     void setAmountOfSeats(int amountOfSeats);
+     void setNumber(int number);
+
+     void setAmountOfLuggage(int amountOfLuggage);
+
+     void setAmountOfPassengers(int amountOfPassengers);
+
+     void setAmountOfSeats(int amountOfSeats);
 }

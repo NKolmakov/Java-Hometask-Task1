@@ -1,7 +1,6 @@
 package train;
 
-import main.java.interfaces.PassengerTrain;
-import main.java.interfaces.Wagon;
+import interfaces.*;
 
 import java.util.ArrayList;
 import java.util.Collections;

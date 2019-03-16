@@ -1,7 +1,6 @@
 package wagonFactory;
 
 import interfaces.*;
-import wagonFactory.*;
 import wagons.CompartmentWagon;
 
 

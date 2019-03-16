@@ -4,6 +4,7 @@ import interfaces.Wagon;
 
 public class ReservedSeatWagon extends AbstractWagon implements Wagon {
     public ReservedSeatWagon(int number, int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity) {
+        super(number, amountOfSeats, amountOfPassengers, amountOfLuggage, luggageCapacity);
     }
 
     @Override
@@ -33,7 +34,7 @@ public class ReservedSeatWagon extends AbstractWagon implements Wagon {
 
     @Override
     public int getNumber() {
-        return 0;
+        return number;
     }
 
     @Override

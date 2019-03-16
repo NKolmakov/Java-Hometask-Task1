@@ -1,9 +1,67 @@
 package wagons;
 
-public class CompartmentWagon extends Wagon{
+import interfaces.Wagon;
+
+public class CompartmentWagon extends AbstractWagon implements Wagon {
     final static String TYPE = "Compartment";
     final static int CONVENIENCE = 3;
+
     public CompartmentWagon(int number, int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity) {
-        this.number = number;
+        super(number, amountOfSeats, amountOfPassengers, amountOfLuggage, luggageCapacity);
+    }
+
+    @Override
+    public void addPassenger(int passengers) {
+
+    }
+
+    @Override
+    public void removePassenger(int passengers) {
+
+    }
+
+    @Override
+    public void addLuggage(int luggage) {
+
+    }
+
+    @Override
+    public void removeLuggage(int luggage) {
+
+    }
+
+    @Override
+    public int getLuggageCapacity() {
+        return 0;
+    }
+
+    @Override
+    public int getNumber() {
+        return number;
+    }
+
+    @Override
+    public int getAmountOfSeats() {
+        return 0;
+    }
+
+    @Override
+    public int getAmountOfPassengers() {
+        return 0;
+    }
+
+    @Override
+    public int getAmountOfLuggage() {
+        return 0;
+    }
+
+    @Override
+    public int getConvenience() {
+        return 0;
+    }
+
+    @Override
+    public String getType() {
+        return null;
     }
 }

@@ -29,5 +29,4 @@ public interface Wagon {
 
      void setAmountOfPassengers(int amountOfPassengers);
 
-     void setAmountOfSeats(int amountOfSeats);
 }

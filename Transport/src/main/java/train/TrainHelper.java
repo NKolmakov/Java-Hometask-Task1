@@ -24,12 +24,8 @@ public class TrainHelper {
         return luggageAmount;
     }
 
-    public static void addWagon(Wagon wagon,List<Wagon> wagons,Locomotive locomotive) {
-        if (wagons.size() + 1 <= locomotive.getTractionPower()) {
-            wagons.add(wagon);
-        } else {
-            throw new RuntimeException("Can't add wagon! Locomotive traction power allows contain" + locomotive.getTractionPower() + "wagons");
-        }
+    public static void addWagon(Train train,Wagon wagon) {
+        train.addWagon(wagon);
     }
 
     public static void removeWagon(List<Wagon> wagons,Wagon wagon) {

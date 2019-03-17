@@ -1,15 +1,13 @@
 package wagons;
 
-import interfaces.Wagon;
-
 public abstract class AbstractWagon {
-    int number;
-    String type;
-    int convenience;
-    int amountOfSeats;
-    int amountOfPassengers;
-    int amountOfLuggage;
-    int luggageCapacity;
+    private int number;
+    protected String type;
+    protected int convenience;
+    private int amountOfSeats;
+    private int amountOfPassengers;
+    private int amountOfLuggage;
+    private int luggageCapacity;
 
     public AbstractWagon(int number, int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity){
         this.number = number;

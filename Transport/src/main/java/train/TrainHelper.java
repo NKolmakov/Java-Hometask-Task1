@@ -24,17 +24,6 @@ public class TrainHelper {
         return luggageAmount;
     }
 
-    public static void addWagon(Train train,Wagon wagon) {
-        train.addWagon(wagon);
-    }
-
-    public static void removeWagon(List<Wagon> wagons,Wagon wagon) {
-        if (wagons.size() > 0) {
-            wagons.remove(wagon);
-        } else {
-            throw new RuntimeException("train doesn't contain any wagons!");
-        }
-    }
 
     public List<Wagon> findByPassengerAmount(int minRange, int maxRange, List<Wagon> list4FendedWagons,List<Wagon> wagons) {
 

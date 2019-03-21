@@ -5,8 +5,8 @@ import wagons.SedentaryWagon;
 
 public class SedentaryWagonFactory implements WagonFactory {
 
-    public Wagon createWagon(int number, int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity) {
-        return new SedentaryWagon(number,amountOfSeats,amountOfPassengers,amountOfLuggage,luggageCapacity);
+    public Wagon createWagon( int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity) {
+        return new SedentaryWagon(amountOfSeats,amountOfPassengers,amountOfLuggage,luggageCapacity);
 
     }
 }

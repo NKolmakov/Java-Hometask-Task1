@@ -1,5 +1,5 @@
 package interfaces;
 
 public interface WagonFactory {
-    Wagon createWagon(int number, int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity);
+    Wagon createWagon(int luggageCapacity, int amountOfSeats,int amountOfLuggage, int amountOfPassengers);
 }

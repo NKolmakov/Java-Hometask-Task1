@@ -1,14 +1,21 @@
 import interfaces.*;
 import train.*;
+import wagonFactory.CompartmentWagonFactory;
+import wagonFactory.PassengerWagonFactory;
 import wagonFactory.ReservedSeatWagonFactory;
 
 import static train.TrainHelper.*;
 
 public class Main {
     public static void main(String[] args) {
-        WagonFactory wagonFactory = new ReservedSeatWagonFactory();
-        Wagon wagon = wagonFactory.createWagon(1,10,20,40,50);
         Train train = new Train(new Locomotive(10));
-        addWagon(wagon,train.setWagons(wagon));
+        PassengerWagonFactory wagonFactory = new PassengerWagonFactory();
+        Wagon wagon = wagonFactory.createWagon();
+        Wagon wagon1 = wagonFactory.createWagon();
+        train.addWagon(wagon);
+        train.addWagon(wagon1);
+        System.out.println("wagon1 number is:"+wagon.getNumber());
+        System.out.println("wagon2 number is:"+wagon1.getNumber());
+
     }
 }

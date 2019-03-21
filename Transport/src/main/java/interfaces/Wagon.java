@@ -6,6 +6,8 @@ public interface Wagon {
 
     int getNumber();
 
+    void setNumber(int number);
+
     int getAmountOfSeats();
 
     int getAmountOfPassengers();

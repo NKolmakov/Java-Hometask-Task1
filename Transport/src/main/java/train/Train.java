@@ -4,6 +4,7 @@ import interfaces.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.log4j.*;
 
 public class Train implements PassengerTrain {
     private String name;

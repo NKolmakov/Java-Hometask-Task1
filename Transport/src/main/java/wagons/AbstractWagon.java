@@ -10,7 +10,15 @@ public abstract class AbstractWagon {
     private int luggageCapacity;
 
     public AbstractWagon(int luggageCapacity, int amountOfSeats, int amountOfLuggage, int amountOfPassengers) {
-        if (amountOfLuggage > luggageCapacity && amountOfPassengers > amountOfSeats) throw new RuntimeException();
+        if (amountOfLuggage > luggageCapacity || amountOfPassengers > amountOfSeats){
+            throw new IllegalArgumentException("Amount of luggage can't be greater than luggage capacity &" +
+                    "\namount of passengers can't be greater than amount of seats\n"+
+                    "\tamount of luggage: "+amountOfLuggage+"\n"+
+                    "\tluggage capacity: "+luggageCapacity+"\n"+
+                    "\tamount of passengers: "+amountOfPassengers+"\n"+
+                    "\tamount of seats: "+amountOfSeats);
+
+        }
         else {
             this.luggageCapacity = luggageCapacity;
             this.amountOfSeats = amountOfSeats;
@@ -75,6 +83,18 @@ public abstract class AbstractWagon {
             System.out.println("Wagon number can't be less than 1");
         }
 
+    }
+
+    @Override
+    public String toString(){
+        String info = "\nWagon "+number+"\n"+
+                "\ttype: "+type+"\n"+
+                "\tConvenience: "+convenience+"\n"+
+                "\tAmount of seats: "+amountOfSeats+"\n" +
+                "\tAmount of passengers: "+amountOfPassengers+"\n" +
+                "\tAmount of luggage: "+amountOfLuggage +"\n" +
+                "\tLuggage capacity: "+luggageCapacity;
+       return info;
     }
 
 

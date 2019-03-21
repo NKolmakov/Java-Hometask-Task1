@@ -1,7 +1,7 @@
 package train;
 
 public class Locomotive {
-    private int tractionPower; // necessary for calculating amount of wagons in the train
+    private int tractionPower; // sets quantity of wagons in one train
 
     public Locomotive(int tractionPower){
         if (tractionPower > 0) {

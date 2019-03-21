@@ -2,47 +2,53 @@ package train;
 
 import interfaces.Wagon;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 public class TrainHelper {
 
-    public static int getCommonPassengerAmount(List<Wagon> wagons) {
+    public static int getCommonPassengerAmount(Train train) {
         int passengerAmount = 0;
-        for (Wagon wagon : wagons) {
+        for (Wagon wagon : train.getWagons()) {
             passengerAmount += wagon.getAmountOfPassengers();
         }
         return passengerAmount;
     }
 
-    public static int getCommonLuggageAmount(List<Wagon> wagons) {
+    public static int getCommonLuggageAmount(Train train) {
         int luggageAmount = 0;
-        for (Wagon wagon : wagons) {
+        for (Wagon wagon : train.getWagons()) {
             luggageAmount += wagon.getAmountOfLuggage();
         }
         return luggageAmount;
     }
 
 
-    public List<Wagon> findByPassengerAmount(int minRange, int maxRange, List<Wagon> list4FendedWagons,List<Wagon> wagons) {
+    public static List<Wagon> findByPassengerAmount(int minRange, int maxRange,Train train) {
 
-        if (minRange >= 0 && maxRange >= 1) {
-            for (Wagon wagon : wagons) {
-                if (wagon.getAmountOfPassengers() >= minRange && wagon.getAmountOfPassengers() <= maxRange) {
-                    list4FendedWagons.add(wagon);
+        List<Wagon> list4FendedWagons = new ArrayList<Wagon>();
+        if (minRange < maxRange) {
+            if (minRange >= 0 && maxRange >= 1) {
+                for (Wagon wagon : train.getWagons()) {
+                    if (wagon.getAmountOfPassengers() >= minRange && wagon.getAmountOfPassengers() <= maxRange) {
+                        list4FendedWagons.add(wagon);
+                    }
                 }
+            } else {
+                System.out.println("Minimal range must not less than 0 and maximal range must be not less than 1 ");
             }
         } else {
-            throw new IllegalArgumentException("Illegal type of values! Range must be at least from 0 to 1");
+            System.out.println("Minimal range can't be greater than maximal");
         }
 
         return list4FendedWagons;
 
     }
 
-    public static void sortWagonsByConvenience(List<Wagon> wagons) {
-        Collections.sort(wagons, new Comparator<Wagon>() {
+    public static void sortWagonsByConvenience(Train train) {
+        Collections.sort(train.getWagons(), new Comparator<Wagon>() {
 
             public int compare(Wagon o1, Wagon o2) {
                 int var1 = o1.getConvenience();

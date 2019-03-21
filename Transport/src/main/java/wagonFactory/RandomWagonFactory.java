@@ -2,7 +2,7 @@ package wagonFactory;
 
 import interfaces.Wagon;
 
-public class PassengerWagonFactory extends AbstractPassengerWagonFactory {
+public class RandomWagonFactory extends AbstractRandomWagonFactory {
     public Wagon createWagon(){
        return generateWagon();
     }

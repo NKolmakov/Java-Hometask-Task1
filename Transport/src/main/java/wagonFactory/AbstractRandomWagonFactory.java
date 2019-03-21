@@ -4,7 +4,7 @@ import interfaces.WagonFactory;
 
 import java.util.Random;
 
-public abstract class AbstractPassengerWagonFactory {
+public abstract class AbstractRandomWagonFactory {
 
     private int getRandomNumberInRange(int min,int max){
         if (min >= max) throw new IllegalArgumentException("Max must be greater than min");
@@ -26,12 +26,28 @@ public abstract class AbstractPassengerWagonFactory {
 
     protected Wagon generateWagon(){
         WagonFactory wagonFactory = generateWagonFactory();
-        int randomAmountOfSeats = getRandomNumberInRange(1,50);
-        int randomAmountOfPassengers = getRandomNumberInRange(1,50);
-        int ramdomAmountOfLuggage = getRandomNumberInRange(1,100);
-        int randomLuggageCapacity = getRandomNumberInRange(1,100);
 
-        return wagonFactory.createWagon(randomLuggageCapacity,randomAmountOfSeats,ramdomAmountOfLuggage,randomAmountOfPassengers);
+        int randomAmountOfSeats = getRandomNumberInRange(10,50);
+        int randomLuggageCapacity = getRandomNumberInRange(10,100);
+        int randomAmountOfPassengers;
+        int randomAmountOfLuggage;
+
+        while (true){
+            randomAmountOfPassengers = getRandomNumberInRange(0,50);
+            if (randomAmountOfPassengers <= randomAmountOfSeats){
+                break;
+            }
+        }
+
+        while (true){
+            randomAmountOfLuggage = getRandomNumberInRange(0,100);
+            if (randomAmountOfLuggage <= randomLuggageCapacity){
+                break;
+            }
+        }
+
+
+        return wagonFactory.createWagon(randomLuggageCapacity,randomAmountOfSeats,randomAmountOfLuggage,randomAmountOfPassengers);
     }
 
 }

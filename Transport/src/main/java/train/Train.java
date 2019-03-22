@@ -4,9 +4,8 @@ import interfaces.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.log4j.*;
 
-public class Train implements PassengerTrain {
+public class Train {
     private String name;
     private int lastWagonNumber = 1; //helps to store information about last wagon number in the list
     private Locomotive locomotive;

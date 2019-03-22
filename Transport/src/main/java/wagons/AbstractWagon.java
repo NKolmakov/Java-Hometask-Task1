@@ -72,27 +72,8 @@ public abstract class AbstractWagon {
         return type;
     }
 
-
-    public void setAmountOfLuggage(int amountOfLuggage) {
-        if (amountOfLuggage >= 0 && this.amountOfLuggage + amountOfLuggage <= luggageCapacity) {
-            this.amountOfLuggage = amountOfLuggage;
-        } else throw new IllegalArgumentException("Luggage amount must be greater than 0");
-    }
-
-
-    public void setAmountOfPassengers(int amountOfPassengers) {
-        if (amountOfPassengers > 0 && this.amountOfPassengers + amountOfPassengers <= amountOfSeats) {
-            this.amountOfPassengers = amountOfPassengers;
-        } else throw new RuntimeException("Passenger quantity can't be greater than seats quantity");
-    }
-
     public void setNumber(int number) {
-        if (number > 0)
         this.number = number;
-        else {
-            System.out.println("Wagon number can't be less than 1");
-        }
-
     }
 
     @Override

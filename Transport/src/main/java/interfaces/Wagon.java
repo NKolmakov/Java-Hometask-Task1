@@ -18,8 +18,4 @@ public interface Wagon {
 
      String getType();
 
-     void setAmountOfLuggage(int amountOfLuggage);
-
-     void setAmountOfPassengers(int amountOfPassengers);
-
 }

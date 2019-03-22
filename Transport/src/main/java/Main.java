@@ -1,10 +1,7 @@
 import interfaces.*;
 import org.apache.log4j.PropertyConfigurator;
 import train.*;
-import wagonFactory.CompartmentWagonFactory;
-import wagonFactory.RandomWagonFactory;
-import wagonFactory.ReservedSeatWagonFactory;
-
+import wagonFactory.*;
 import static train.TrainHelper.*;
 
 
@@ -21,7 +18,7 @@ public class Main {
         List<Wagon> list4findedwagons = new ArrayList<Wagon>();
 
         for (int i = 0; i < 10; i++) {
-            wagons.add(wagonFactory.createWagon());
+            wagons.add(wagonFactory.createWagon()); //-----------here-------------
         }
 
         train.addWagons(wagons);

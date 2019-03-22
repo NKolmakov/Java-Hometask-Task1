@@ -1,5 +1,8 @@
 package wagons;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
 public abstract class AbstractWagon {
     private int number;
     protected String type;
@@ -9,21 +12,28 @@ public abstract class AbstractWagon {
     private int amountOfLuggage;
     private int luggageCapacity;
 
+    private static final Logger logger = Logger.getLogger(AbstractWagon.class);
     public AbstractWagon(int luggageCapacity, int amountOfSeats, int amountOfLuggage, int amountOfPassengers) {
-        if (amountOfLuggage > luggageCapacity || amountOfPassengers > amountOfSeats){
-            throw new IllegalArgumentException("Amount of luggage can't be greater than luggage capacity &" +
-                    "\namount of passengers can't be greater than amount of seats\n"+
-                    "\tamount of luggage: "+amountOfLuggage+"\n"+
-                    "\tluggage capacity: "+luggageCapacity+"\n"+
-                    "\tamount of passengers: "+amountOfPassengers+"\n"+
-                    "\tamount of seats: "+amountOfSeats);
+        PropertyConfigurator.configure("log4j.properties");
+        try {
+            if (amountOfLuggage > luggageCapacity || amountOfPassengers > amountOfSeats){
+                throw new IllegalArgumentException("Amount of luggage can't be greater than luggage capacity &" +
+                        "\namount of passengers can't be greater than amount of seats\n" +
+                        "\tamount of luggage: " + amountOfLuggage + "\n" +
+                        "\tluggage capacity: " + luggageCapacity + "\n" +
+                        "\tamount of passengers: " + amountOfPassengers + "\n" +
+                        "\tamount of seats: " + amountOfSeats);
+            }
+            else {
+                this.luggageCapacity = luggageCapacity;
+                this.amountOfSeats = amountOfSeats;
+                this.amountOfPassengers = amountOfPassengers;
+                this.amountOfLuggage = amountOfLuggage;
+            }
+        } catch (IllegalArgumentException exception) {
+            logger.error("Uncorrect capacity!",exception);
+            this.number = -1;
 
-        }
-        else {
-            this.luggageCapacity = luggageCapacity;
-            this.amountOfSeats = amountOfSeats;
-            this.amountOfPassengers = amountOfPassengers;
-            this.amountOfLuggage = amountOfLuggage;
         }
     }
 

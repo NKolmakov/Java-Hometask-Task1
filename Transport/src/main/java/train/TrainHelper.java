@@ -1,19 +1,26 @@
 package train;
 
 import interfaces.Wagon;
+import org.apache.log4j.PropertyConfigurator;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.*;
+
 
 public class TrainHelper {
+    public static final Logger logger = Logger.getLogger(TrainHelper.class.toString());
 
     public static int getCommonPassengerAmount(Train train) {
+        PropertyConfigurator.configure("log4j.properties");
         int passengerAmount = 0;
         for (Wagon wagon : train.getWagons()) {
             passengerAmount += wagon.getAmountOfPassengers();
         }
+        logger.info("Calculated passenger amount");
         return passengerAmount;
     }
 

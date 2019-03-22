@@ -1,7 +1,9 @@
 import interfaces.*;
 import org.apache.log4j.PropertyConfigurator;
 import train.*;
+import wagonFactory.CompartmentWagonFactory;
 import wagonFactory.RandomWagonFactory;
+import wagonFactory.ReservedSeatWagonFactory;
 
 import static train.TrainHelper.*;
 
@@ -12,10 +14,7 @@ import java.util.logging.Logger;
 
 public class Main {
     public static void main(String[] args) {
-        Logger logger = Logger.getLogger(Main.class.toString());
-        PropertyConfigurator.configure("log4j.properties");
         Train train = new Train("Голубой вагон", new Locomotive(10));
-        logger.info("Created train: " + train.getName());
         RandomWagonFactory wagonFactory = new RandomWagonFactory();
         List<Wagon> wagons = new ArrayList<Wagon>();
 
@@ -28,7 +27,6 @@ public class Main {
         train.addWagons(wagons);
         System.out.println("BEFORE REMOVE: \n" + train.toString());
         train.removeWagon(wagons.get(1));
-        logger.info("Wagons have removed");
         System.out.println("AFTER REMOVE: \n" + train.toString());
         System.out.println("SORTING: \n");
         sortWagonsByConvenience(train);
@@ -45,7 +43,11 @@ public class Main {
         } else {
             System.out.println("No finded wagons");
         }
+
+        WagonFactory wagonFactory1 = new ReservedSeatWagonFactory();
+        Wagon wagon = wagonFactory1.createWagon(10,20,40,30);
+        train.addWagon(wagon);
+        System.out.println(train.toString());
     }
-    // find out why doesn't logger write to file and logger levels
-    //create a test
+    //return exception version and complete logger
 }

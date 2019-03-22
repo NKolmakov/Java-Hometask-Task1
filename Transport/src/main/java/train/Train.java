@@ -19,6 +19,7 @@ public class Train implements PassengerTrain {
     public Train(String name, Locomotive locomotive) {
         this.name = name;
         this.locomotive = locomotive;
+
     }
 
     public List<Wagon> getWagons() {
@@ -35,7 +36,7 @@ public class Train implements PassengerTrain {
 
     public void addWagon(Wagon wagon) {
         if (wagons.size() + 1 <= locomotive.getTractionPower()) {
-            if (!wagons.contains(wagon.getNumber())) {
+            if (!wagons.contains(wagon.getNumber()) && wagon.getNumber()!=-1) {
                 wagon.setNumber(lastWagonNumber);
                 wagons.add(wagon);
                 lastWagonNumber++;

@@ -1,6 +1,6 @@
-package wagonFactory;
+package wagons;
 
-class ReservedSeatWagon extends AbstractWagon{
+class ReservedSeatWagon extends Wagon {
     public ReservedSeatWagon( int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity) {
         super(amountOfSeats, amountOfPassengers, amountOfLuggage, luggageCapacity);
         this.type = "ReservedSeat";

@@ -1,6 +1,6 @@
 import train.*;
-import wagonFactory.*;
-import wagonFactory.AbstractWagon;
+import wagons.*;
+import wagons.Wagon;
 
 import static train.TrainHelper.*;
 
@@ -11,10 +11,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Train train = new Train("До Хогвартса", new Locomotive(10));
-        RandomWagonFactory wagonFactory = new RandomWagonFactory();
-        List<AbstractWagon> wagons = new ArrayList<AbstractWagon>();
+        WagonFactory wagonFactory = new WagonFactory();
+        List<Wagon> wagons = new ArrayList<Wagon>();
 
-        List<AbstractWagon> list4findedwagons = new ArrayList<AbstractWagon>();
+        List<Wagon> list4findedwagons = new ArrayList<Wagon>();
 
         for (int i = 0; i < 10; i++) {
             wagons.add(wagonFactory.generateWagon()); //-----------here-------------
@@ -32,7 +32,7 @@ public class Main {
         list4findedwagons.addAll(findByPassengerAmount(50, 40, train));
         System.out.println("FIND WAGONS: \n");
         if (list4findedwagons.size() > 0) {
-            for (AbstractWagon list : list4findedwagons) {
+            for (Wagon list : list4findedwagons) {
                 System.out.println(list.toString());
 
             }
@@ -41,10 +41,10 @@ public class Main {
         }
 
         System.out.println("CHECKING WAGON FACTORY, USED IN ABSTRACT CLASS");
-        AbstractRandomWagonFactory abstractRandomWagonFactory = new RandomWagonFactory();
-        AbstractWagon abstractWagon = abstractRandomWagonFactory.generateWagon();
+        RandomWagonFactory randomWagonFactory = new WagonFactory();
+        Wagon wagon = randomWagonFactory.generateWagon();
         Train train1 = new Train(new Locomotive(10));
-        train1.addWagon(abstractWagon);
+        train1.addWagon(wagon);
     }
     //return exception version and complete logger
     //TODO: create packages with wagons

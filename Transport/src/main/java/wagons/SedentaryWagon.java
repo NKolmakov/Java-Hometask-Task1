@@ -1,6 +1,6 @@
-package wagonFactory;
+package wagons;
 
-class SedentaryWagon extends AbstractWagon {
+class SedentaryWagon extends Wagon {
 
     public SedentaryWagon( int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity) {
         super(amountOfSeats, amountOfPassengers, amountOfLuggage, luggageCapacity);

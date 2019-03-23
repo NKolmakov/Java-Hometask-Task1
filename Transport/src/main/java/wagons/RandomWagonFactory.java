@@ -1,10 +1,10 @@
-package wagonFactory;
+package wagons;
 import org.apache.log4j.Logger;
 
 import java.util.Random;
 
-public abstract class AbstractRandomWagonFactory {
-    private static final Logger logger = Logger.getLogger(AbstractRandomWagonFactory.class);
+public abstract class RandomWagonFactory {
+    private static final Logger logger = Logger.getLogger(RandomWagonFactory.class);
     private int getRandomNumberInRange(int min,int max){
         if (min >= max){
             logger.error("Input values not equals requirements");
@@ -15,7 +15,7 @@ public abstract class AbstractRandomWagonFactory {
         return random.nextInt((max-min)+1)+min;
     }
 
-    private AbstractRandomWagonFactory generateWagonFactory(){
+    private RandomWagonFactory generateWagonFactory(){
         int randomWagonFactoryIndex = getRandomNumberInRange(1,3);
         switch (randomWagonFactoryIndex){
             case 1: return new SedentaryWagonFactory();
@@ -26,8 +26,8 @@ public abstract class AbstractRandomWagonFactory {
 
     }
 
-    public AbstractWagon generateWagon(){
-        AbstractRandomWagonFactory wagonFactory = generateWagonFactory();
+    public Wagon generateWagon(){
+        RandomWagonFactory wagonFactory = generateWagonFactory();
 
         int randomAmountOfSeats = getRandomNumberInRange(10,50);
         int randomLuggageCapacity = getRandomNumberInRange(10,100);
@@ -52,6 +52,6 @@ public abstract class AbstractRandomWagonFactory {
         return wagonFactory.createWagon(randomLuggageCapacity,randomAmountOfSeats,randomAmountOfLuggage,randomAmountOfPassengers);
     }
 
-    protected abstract AbstractWagon createWagon(int luggageCapacity, int amountOfSeats,int amountOfLuggage, int amountOfPassengers);
+    protected abstract Wagon createWagon(int luggageCapacity, int amountOfSeats, int amountOfLuggage, int amountOfPassengers);
 
 }

@@ -1,8 +1,8 @@
-package wagonFactory;
+package wagons;
 
 import org.apache.log4j.Logger;
 
-public abstract class AbstractWagon {
+public abstract class Wagon {
     private int number;
     protected String type;
     protected int convenience;
@@ -11,8 +11,8 @@ public abstract class AbstractWagon {
     private int amountOfLuggage;
     private int luggageCapacity;
 
-    public static final Logger logger = Logger.getLogger(AbstractWagon.class);
-    public AbstractWagon(int luggageCapacity, int amountOfSeats, int amountOfLuggage, int amountOfPassengers) {
+    public static final Logger logger = Logger.getLogger(Wagon.class);
+    public Wagon(int luggageCapacity, int amountOfSeats, int amountOfLuggage, int amountOfPassengers) {
        // PropertyConfigurator.configure("log4j.properties");
         try {
             if (amountOfLuggage > luggageCapacity || amountOfPassengers > amountOfSeats){
@@ -77,7 +77,7 @@ public abstract class AbstractWagon {
 
     @Override
     public String toString(){
-        String info = "\nAbstractWagon "+number+"\n"+
+        String info = "\nWagon "+number+"\n"+
                 "\ttype: "+type+"\n"+
                 "\tConvenience: "+convenience+"\n"+
                 "\tAmount of seats: "+amountOfSeats+"\n" +

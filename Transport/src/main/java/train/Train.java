@@ -1,6 +1,6 @@
 package train;
 
-import interfaces.*;
+import wagonFactory.AbstractWagon;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ public class Train {
     private String name;
     private int lastWagonNumber = 1; //helps to store information about last wagon number in the list
     private Locomotive locomotive;
-    private List<Wagon> wagons = new ArrayList<Wagon>();
+    private List<AbstractWagon> wagons = new ArrayList<AbstractWagon>();
 
     public Train(Locomotive locomotive) {
         this.locomotive = locomotive;
@@ -21,7 +21,7 @@ public class Train {
 
     }
 
-    public List<Wagon> getWagons() {
+    public List<AbstractWagon> getWagons() {
         return wagons;
     }
 
@@ -33,29 +33,29 @@ public class Train {
         this.name = name;
     }
 
-    public void addWagon(Wagon wagon) {
+    public void addWagon(AbstractWagon wagon) {
         if (wagons.size() + 1 <= locomotive.getTractionPower()) {
             if (!wagons.contains(wagon.getNumber()) && wagon.getNumber()!=-1) {
                 wagon.setNumber(lastWagonNumber);
                 wagons.add(wagon);
                 lastWagonNumber++;
-            } else System.out.println("Wagon " + wagon.getNumber() + "already exists! New wagon won't be added");
+            } else System.out.println("AbstractWagon " + wagon.getNumber() + "already exists! New wagon won't be added");
         } else System.out.println("Maximum wagons quantity is reached!");
     }
 
-    public void addWagons(List<Wagon> wagons) {
+    public void addWagons(List<AbstractWagon> wagons) {
         if (this.wagons.size() + wagons.size() <= locomotive.getTractionPower()) {
-            for (Wagon wagon : wagons) {
+            for (AbstractWagon wagon : wagons) {
                 if (!this.wagons.contains(wagon.getNumber())) {
                     wagon.setNumber(lastWagonNumber);
                     this.wagons.add(wagon);
                     lastWagonNumber++;
-                } else System.out.println("Wagon " + wagon.getNumber() + "already exists! New wagon won't be added");
+                } else System.out.println("AbstractWagon " + wagon.getNumber() + "already exists! New wagon won't be added");
             }
         } else System.out.println("Maximum wagons quantity is reached!");
     }
 
-    public void removeWagon(Wagon wagon) {
+    public void removeWagon(AbstractWagon wagon) {
         if (this.wagons.size() > 0) {
             if (wagons.contains(wagon)) {
                 wagons.remove(wagon);
@@ -67,9 +67,9 @@ public class Train {
         }
     }
 
-    public void removeWagons(List<Wagon> wagons) {
+    public void removeWagons(List<AbstractWagon> wagons) {
         if (this.wagons.size() > 0) {
-            for (Wagon wagon : wagons) {
+            for (AbstractWagon wagon : wagons) {
                 if (this.wagons.contains(wagon)) {
                     this.wagons.remove(wagon);
                 } else {
@@ -84,7 +84,7 @@ public class Train {
         public String toString () {
             String trainInfo = "\nTrain: " + name + "\n";
             if (wagons.size() > 0) {
-                for (Wagon wagon : wagons) {
+                for (AbstractWagon wagon : wagons) {
                     trainInfo += wagon.toString() + "\n";
                 }
             } else trainInfo += "No wagons";

@@ -1,7 +1,6 @@
-package wagons;
+package wagonFactory;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
 public abstract class AbstractWagon {
     private int number;
@@ -78,7 +77,7 @@ public abstract class AbstractWagon {
 
     @Override
     public String toString(){
-        String info = "\nWagon "+number+"\n"+
+        String info = "\nAbstractWagon "+number+"\n"+
                 "\ttype: "+type+"\n"+
                 "\tConvenience: "+convenience+"\n"+
                 "\tAmount of seats: "+amountOfSeats+"\n" +

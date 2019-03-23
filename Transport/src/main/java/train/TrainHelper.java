@@ -1,14 +1,14 @@
 package train;
 
-import interfaces.Wagon;
 import org.apache.log4j.PropertyConfigurator;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import org.apache.log4j.PropertyConfigurator;
+
 import org.apache.log4j.*;
+import wagonFactory.AbstractWagon;
 
 
 public class TrainHelper {
@@ -17,7 +17,7 @@ public class TrainHelper {
     public static int getCommonPassengerAmount(Train train) {
         PropertyConfigurator.configure("log4j.properties");
         int passengerAmount = 0;
-        for (Wagon wagon : train.getWagons()) {
+        for (AbstractWagon wagon : train.getWagons()) {
             passengerAmount += wagon.getAmountOfPassengers();
         }
         logger.info("Calculated passenger amount");
@@ -26,19 +26,19 @@ public class TrainHelper {
 
     public static int getCommonLuggageAmount(Train train) {
         int luggageAmount = 0;
-        for (Wagon wagon : train.getWagons()) {
+        for (AbstractWagon wagon : train.getWagons()) {
             luggageAmount += wagon.getAmountOfLuggage();
         }
         return luggageAmount;
     }
 
 
-    public static List<Wagon> findByPassengerAmount(int minRange, int maxRange,Train train) {
+    public static List<AbstractWagon> findByPassengerAmount(int minRange, int maxRange, Train train) {
 
-        List<Wagon> list4FendedWagons = new ArrayList<Wagon>();
+        List<AbstractWagon> list4FendedWagons = new ArrayList<AbstractWagon>();
         if (minRange < maxRange) {
             if (minRange >= 0 && maxRange >= 1) {
-                for (Wagon wagon : train.getWagons()) {
+                for (AbstractWagon wagon : train.getWagons()) {
                     if (wagon.getAmountOfPassengers() >= minRange && wagon.getAmountOfPassengers() <= maxRange) {
                         list4FendedWagons.add(wagon);
                     }
@@ -55,9 +55,9 @@ public class TrainHelper {
     }
 
     public static void sortWagonsByConvenience(Train train) {
-        Collections.sort(train.getWagons(), new Comparator<Wagon>() {
+        Collections.sort(train.getWagons(), new Comparator<AbstractWagon>() {
 
-            public int compare(Wagon o1, Wagon o2) {
+            public int compare(AbstractWagon o1, AbstractWagon o2) {
                 int var1 = o1.getConvenience();
                 int var2 = o2.getConvenience();
                 if (var1 < var2){

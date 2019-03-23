@@ -1,10 +1,9 @@
-package wagons;
+package wagonFactory;
 
-import interfaces.Wagon;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-public class CompartmentWagon extends AbstractWagon implements Wagon {
+class CompartmentWagon extends AbstractWagon {
     private final static Logger logger = Logger.getLogger(CompartmentWagon.class);
 
     public CompartmentWagon(int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity) {

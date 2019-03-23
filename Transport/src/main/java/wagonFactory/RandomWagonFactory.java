@@ -1,11 +1,8 @@
 package wagonFactory;
 
-import interfaces.Wagon;
-import interfaces.WagonFactory;
-
 public class RandomWagonFactory extends AbstractRandomWagonFactory {
 
-    public Wagon createWagon() {
+    public AbstractWagon createWagon(int luggageCapacity, int amountOfSeats, int amountOfLuggage, int amountOfPassengers) {
         return generateWagon();
     }
 }

@@ -1,12 +1,8 @@
 package wagonFactory;
 
-import interfaces.*;
-import wagons.CompartmentWagon;
+class CompartmentWagonFactory extends AbstractRandomWagonFactory {
 
-
-class CompartmentWagonFactory implements WagonFactory {
-
-    public Wagon createWagon(int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity) {
+    public AbstractWagon createWagon(int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity) {
         return new CompartmentWagon(amountOfSeats,amountOfPassengers,amountOfLuggage,luggageCapacity);
     }
 }

@@ -1,8 +1,6 @@
-package wagons;
+package wagonFactory;
 
-import interfaces.Wagon;
-
-public class SedentaryWagon extends AbstractWagon implements Wagon {
+class SedentaryWagon extends AbstractWagon {
 
     public SedentaryWagon( int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity) {
         super(amountOfSeats, amountOfPassengers, amountOfLuggage, luggageCapacity);

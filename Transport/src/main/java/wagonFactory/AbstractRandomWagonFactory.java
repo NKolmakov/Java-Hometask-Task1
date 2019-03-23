@@ -1,6 +1,4 @@
 package wagonFactory;
-import interfaces.Wagon;
-import interfaces.WagonFactory;
 import org.apache.log4j.Logger;
 
 import java.util.Random;
@@ -17,7 +15,7 @@ public abstract class AbstractRandomWagonFactory {
         return random.nextInt((max-min)+1)+min;
     }
 
-    private WagonFactory generateWagonFactory(){
+    private AbstractRandomWagonFactory generateWagonFactory(){
         int randomWagonFactoryIndex = getRandomNumberInRange(1,3);
         switch (randomWagonFactoryIndex){
             case 1: return new SedentaryWagonFactory();
@@ -28,8 +26,8 @@ public abstract class AbstractRandomWagonFactory {
 
     }
 
-    protected Wagon generateWagon(){
-        WagonFactory wagonFactory = generateWagonFactory();
+    public AbstractWagon generateWagon(){
+        AbstractRandomWagonFactory wagonFactory = generateWagonFactory();
 
         int randomAmountOfSeats = getRandomNumberInRange(10,50);
         int randomLuggageCapacity = getRandomNumberInRange(10,100);
@@ -53,5 +51,7 @@ public abstract class AbstractRandomWagonFactory {
 
         return wagonFactory.createWagon(randomLuggageCapacity,randomAmountOfSeats,randomAmountOfLuggage,randomAmountOfPassengers);
     }
+
+    protected abstract AbstractWagon createWagon(int luggageCapacity, int amountOfSeats,int amountOfLuggage, int amountOfPassengers);
 
 }

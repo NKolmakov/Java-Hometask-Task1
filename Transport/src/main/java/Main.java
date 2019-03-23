@@ -1,24 +1,23 @@
-import interfaces.*;
-import org.apache.log4j.PropertyConfigurator;
 import train.*;
 import wagonFactory.*;
+import wagonFactory.AbstractWagon;
+
 import static train.TrainHelper.*;
 
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 public class Main {
     public static void main(String[] args) {
         Train train = new Train("До Хогвартса", new Locomotive(10));
         RandomWagonFactory wagonFactory = new RandomWagonFactory();
-        List<Wagon> wagons = new ArrayList<Wagon>();
+        List<AbstractWagon> wagons = new ArrayList<AbstractWagon>();
 
-        List<Wagon> list4findedwagons = new ArrayList<Wagon>();
+        List<AbstractWagon> list4findedwagons = new ArrayList<AbstractWagon>();
 
         for (int i = 0; i < 10; i++) {
-            wagons.add(wagonFactory.createWagon()); //-----------here-------------
+            wagons.add(wagonFactory.generateWagon()); //-----------here-------------
         }
 
         train.addWagons(wagons);
@@ -33,7 +32,7 @@ public class Main {
         list4findedwagons.addAll(findByPassengerAmount(50, 40, train));
         System.out.println("FIND WAGONS: \n");
         if (list4findedwagons.size() > 0) {
-            for (Wagon list : list4findedwagons) {
+            for (AbstractWagon list : list4findedwagons) {
                 System.out.println(list.toString());
 
             }
@@ -41,11 +40,12 @@ public class Main {
             System.out.println("No finded wagons");
         }
 
-        WagonFactory wagonFactory1 = new ReservedSeatWagonFactory();
-        Wagon wagon = wagonFactory1.createWagon(10,20,40,30);
-        train.addWagon(wagon);
-        System.out.println(train.toString());
+        System.out.println("CHECKING WAGON FACTORY, USED IN ABSTRACT CLASS");
+        AbstractRandomWagonFactory abstractRandomWagonFactory = new RandomWagonFactory();
+        AbstractWagon abstractWagon = abstractRandomWagonFactory.generateWagon();
+        Train train1 = new Train(new Locomotive(10));
+        train1.addWagon(abstractWagon);
     }
     //return exception version and complete logger
-    //TODO: make private factory
+    //TODO: create packages with wagons
 }

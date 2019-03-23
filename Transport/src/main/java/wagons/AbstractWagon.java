@@ -12,9 +12,9 @@ public abstract class AbstractWagon {
     private int amountOfLuggage;
     private int luggageCapacity;
 
-    private static final Logger logger = Logger.getLogger(AbstractWagon.class);
+    public static final Logger logger = Logger.getLogger(AbstractWagon.class);
     public AbstractWagon(int luggageCapacity, int amountOfSeats, int amountOfLuggage, int amountOfPassengers) {
-        PropertyConfigurator.configure("log4j.properties");
+       // PropertyConfigurator.configure("log4j.properties");
         try {
             if (amountOfLuggage > luggageCapacity || amountOfPassengers > amountOfSeats){
                 throw new IllegalArgumentException("Amount of luggage can't be greater than luggage capacity &" +

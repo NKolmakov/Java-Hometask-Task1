@@ -43,19 +43,6 @@ public class Train {
         } else System.out.println("Maximum wagons quantity is reached!");
     }
 
-
-    public void addWagons(Wagon... wagons) {
-        if (this.wagons.size() + wagons.length <= locomotive.getTractionPower()) {
-            for (Wagon wagon : wagons) {
-                if (!this.wagons.contains(wagon.getNumber())) {
-                    wagon.setNumber(lastWagonNumber);
-                    this.wagons.add(wagon);
-                    lastWagonNumber++;
-                } else System.out.println("Wagon " + wagon.getNumber() + "already exists! New wagon won't be added");
-            }
-        } else System.out.println("Maximum wagons quantity is reached!");
-    }
-
     public void addWagons(List<Wagon> wagons) {
         if (this.wagons.size() + wagons.size() <= locomotive.getTractionPower()) {
             for (Wagon wagon : wagons) {
@@ -74,20 +61,6 @@ public class Train {
                 wagons.remove(wagon);
             } else {
                 System.out.println("Can't find wagon " + wagon.getNumber() + " in train " + name);
-            }
-        } else {
-            System.out.println("Train doesn't contain any wagons!");
-        }
-    }
-
-    public void removeWagons(Wagon... wagons) {
-        if (this.wagons.size() > 0) {
-            for (Wagon wagon : wagons) {
-                if (this.wagons.contains(wagon)) {
-                    this.wagons.remove(wagon);
-                } else {
-                    System.out.println("Can't find wagon " + wagon.getNumber() + " in train " + name);
-                }
             }
         } else {
             System.out.println("Train doesn't contain any wagons!");

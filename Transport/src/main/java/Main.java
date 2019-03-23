@@ -48,4 +48,5 @@ public class Main {
     }
     //return exception version and complete logger
     //TODO: create packages with wagons
+    //todo: find out why doesn't work log4j.properties at resources
 }

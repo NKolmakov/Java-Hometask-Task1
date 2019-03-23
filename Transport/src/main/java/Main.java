@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 
 public class Main {
     public static void main(String[] args) {
-        Train train = new Train("Голубой вагон", new Locomotive(10));
+        Train train = new Train("До Хогвартса", new Locomotive(10));
         RandomWagonFactory wagonFactory = new RandomWagonFactory();
         List<Wagon> wagons = new ArrayList<Wagon>();
 
@@ -47,4 +47,5 @@ public class Main {
         System.out.println(train.toString());
     }
     //return exception version and complete logger
+    //TODO: make private factory
 }

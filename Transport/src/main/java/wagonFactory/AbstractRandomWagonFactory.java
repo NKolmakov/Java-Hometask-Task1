@@ -1,13 +1,17 @@
 package wagonFactory;
 import interfaces.Wagon;
 import interfaces.WagonFactory;
+import org.apache.log4j.Logger;
 
 import java.util.Random;
 
 public abstract class AbstractRandomWagonFactory {
-
+    private static final Logger logger = Logger.getLogger(AbstractRandomWagonFactory.class);
     private int getRandomNumberInRange(int min,int max){
-        if (min >= max) throw new IllegalArgumentException("Max must be greater than min");
+        if (min >= max){
+            logger.error("Input values not equals requirements");
+            throw new IllegalArgumentException("Max must be greater than min");
+        }
 
         Random random = new Random();
         return random.nextInt((max-min)+1)+min;

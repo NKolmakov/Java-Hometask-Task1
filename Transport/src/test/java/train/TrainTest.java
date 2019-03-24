@@ -80,32 +80,19 @@ public class TrainTest {
         assertEquals(expected, actual);
     }
 
-    @Test
+    @Test(expected = StackOverflowError.class)
     public void addWagon_TRAIN_OVERFLOW() {
-        Train train1 = new Train(new Locomotive(10));
         Wagon wagon = wagonFactory.generateWagon();
-        train1.addWagons(wagons);
-        train1.addWagon(wagon);
-        List<Wagon> expected = new ArrayList<Wagon>();
-        expected.addAll(wagons);
-        expected.add(wagon);
-        List<Wagon> actual = train1.getWagons();
-
-        assertNotEquals(expected, actual);
+        train.addWagon(wagon);
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void addWagon_CONTAINS_SAME() {
         Wagon wagon = wagons.get(1);
         Wagon wagon1 = wagons.get(1);
         Train train1 = new Train(new Locomotive(10));
         train1.addWagon(wagon);
         train1.addWagon(wagon1);
-        List<Wagon> expected = new ArrayList<Wagon>();
-        expected.add(wagon);
-        List<Wagon> actual = train1.getWagons();
-
-        assertEquals(expected, actual);
     }
 
     @Test()
@@ -128,19 +115,37 @@ public class TrainTest {
         assertEquals(expected, actual);
     }
 
-    @Test
+    @Test(expected = StackOverflowError.class)
     public void addWagons_TRAIN_OVERFLOW() {
         List<Wagon> wagonList = new ArrayList<Wagon>();
-        List<Wagon> expected = new ArrayList<Wagon>();
-        List<Wagon> actual = new ArrayList<Wagon>();
         Wagon wagon = wagonFactory.generateWagon();
         Wagon wagon1 = wagonFactory.generateWagon();
         wagonList.add(wagon);
         wagonList.add(wagon1);
-        expected.addAll(wagons);
-        expected.addAll(wagonList);
         train.addWagons(wagonList);
-        actual = train.getWagons();
-        assertNotEquals(expected, actual);
     }
+
+    @Test
+    public void addWagons_NO_TRAIN_OVERFLOW() {
+        List<Wagon> expected = wagons;
+        Train train1 = new Train(new Locomotive(10));
+        train1.addWagons(wagons);
+        List<Wagon> actual = train1.getWagons();
+        assertEquals(expected, actual);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void addWagons_CONTAINS_SAME() {
+        Wagon wagon = wagons.get(1);
+        Wagon wagon1 = wagons.get(2);
+        List<Wagon> wagonList = new ArrayList<Wagon>();
+        wagonList.add(wagon);
+        wagonList.add(wagon1);
+        Train train1 = new Train(new Locomotive(10));
+        train1.addWagon(wagon);
+        train1.addWagon(wagon1);
+        train1.addWagons(wagonList);
+
+    }
+
 }

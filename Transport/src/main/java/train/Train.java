@@ -4,6 +4,7 @@ import wagons.Wagon;
 import static train.TrainHelper.*;
 
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 import java.util.List;
 
 public class Train {
@@ -35,7 +36,6 @@ public class Train {
     }
 
     public void addWagon (Wagon wagon) throws IllegalArgumentException,StackOverflowError {
-        try {
             if (wagons.size() + 1 <= locomotive.getTractionPower()) {
                 if (!isContains(wagons,wagon)) {
                     wagon.setNumber(lastWagonNumber);
@@ -43,41 +43,36 @@ public class Train {
                     lastWagonNumber++;
                 } else throw new IllegalArgumentException("Wagon " + wagon.getNumber() + "already exists! New wagon won't be added");
             } else throw new StackOverflowError("Locomotive traction power doesn't allow to add more wagons! New wagon won't be added");
-        } catch (IllegalArgumentException e) {
-            e.getMessage();
-        } catch (StackOverflowError stackOverflowError) {
-            stackOverflowError.getMessage();
-        }
     }
 
     public void addWagons(List<Wagon> wagons) {
         if (this.wagons.size() + wagons.size() <= locomotive.getTractionPower()) {
             for (Wagon wagon : wagons) {
-                if (!this.wagons.contains(wagon.getNumber())) {
+                if (!isContains(this.wagons,wagon)) {
                     wagon.setNumber(lastWagonNumber);
                     this.wagons.add(wagon);
                     lastWagonNumber++;
-                } else System.out.println("Wagon " + wagon.getNumber() + "already exists! New wagon won't be added");
+                } else throw new IllegalArgumentException("Wagon " + wagon.getNumber() + "already exists! New wagon won't be added");
             }
-        } else System.out.println("Maximum wagons quantity is reached!");
+        } else throw new StackOverflowError("Maximum wagons quantity is reached!");
     }
 
     public void removeWagon(Wagon wagon) {
         if (this.wagons.size() > 0) {
-            if (wagons.contains(wagon)) {
+            if (isContains(wagons,wagon)) {
                 wagons.remove(wagon);
             } else {
-                System.out.println("Can't find wagon " + wagon.getNumber() + " in train " + name);
+                throw new NullPointerException("Wagon not exists!");
             }
         } else {
-            System.out.println("Train doesn't contain any wagons!");
+            throw new EmptyStackException();
         }
     }
 
     public void removeWagons(List<Wagon> wagons) {
         if (this.wagons.size() > 0) {
             for (Wagon wagon : wagons) {
-                if (this.wagons.contains(wagon)) {
+                if (isContains(this.wagons,wagon)) {
                     this.wagons.remove(wagon);
                 } else {
                     System.out.println("Can't find wagon " + wagon.getNumber() + " in train " + name);

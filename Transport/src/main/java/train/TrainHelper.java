@@ -71,4 +71,13 @@ public class TrainHelper {
         });
     }
 
+    public static boolean isContains(List<Wagon> wagons,Wagon wagon){
+        for(Wagon wagon1:wagons){
+            if(wagon1.getNumber() == wagon.getNumber()){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

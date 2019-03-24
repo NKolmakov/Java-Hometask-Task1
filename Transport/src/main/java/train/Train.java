@@ -1,6 +1,7 @@
 package train;
 
 import wagons.Wagon;
+import static train.TrainHelper.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,14 +34,20 @@ public class Train {
         this.name = name;
     }
 
-    public void addWagon(Wagon wagon) {
-        if (wagons.size() + 1 <= locomotive.getTractionPower()) {
-            if (!wagons.contains(wagon.getNumber()) && wagon.getNumber()!=-1) {
-                wagon.setNumber(lastWagonNumber);
-                wagons.add(wagon);
-                lastWagonNumber++;
-            } else System.out.println("Wagon " + wagon.getNumber() + "already exists! New wagon won't be added");
-        } else System.out.println("Maximum wagons quantity is reached!");
+    public void addWagon (Wagon wagon) throws IllegalArgumentException,StackOverflowError {
+        try {
+            if (wagons.size() + 1 <= locomotive.getTractionPower()) {
+                if (!isContains(wagons,wagon)) {
+                    wagon.setNumber(lastWagonNumber);
+                    wagons.add(wagon);
+                    lastWagonNumber++;
+                } else throw new IllegalArgumentException("Wagon " + wagon.getNumber() + "already exists! New wagon won't be added");
+            } else throw new StackOverflowError("Locomotive traction power doesn't allow to add more wagons! New wagon won't be added");
+        } catch (IllegalArgumentException e) {
+            e.getMessage();
+        } catch (StackOverflowError stackOverflowError) {
+            stackOverflowError.getMessage();
+        }
     }
 
     public void addWagons(List<Wagon> wagons) {

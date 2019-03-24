@@ -15,14 +15,14 @@ import static org.junit.Assert.*;
 public class TrainTest {
     Train train;
     List<Wagon> wagons;
+    WagonFactory wagonFactory;
     public static final Logger logger = Logger.getLogger(TrainTest.class);
 
     @Before
     public void setUp() throws Exception {
-    //    PropertyConfigurator.configure("log4j.properties");
-       train = new Train(new Locomotive(10));
-       wagons = new ArrayList<Wagon>();
-        WagonFactory wagonFactory = new WagonFactory();
+        train = new Train(new Locomotive(10));
+        wagons = new ArrayList<Wagon>();
+        wagonFactory = new WagonFactory();
 
         for (int i = 0; i < 10; i++) {
             wagons.add(wagonFactory.generateWagon());
@@ -41,7 +41,7 @@ public class TrainTest {
         List<Wagon> expected = wagons;
         train.removeWagon(train.getWagons().get(5));
         List<Wagon> actual = train.getWagons();
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -54,7 +54,7 @@ public class TrainTest {
         List<Wagon> expected = wagons;
         train.removeWagons(lis4Delete);
         List<Wagon> actual = train.getWagons();
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -65,11 +65,11 @@ public class TrainTest {
         expected = wagons;
         actual = train.getWagons();
 
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
-    public void addWagon() {
+    public void addWagon_NO_TRAIN_OVERFLOW() {
         Wagon wagon = wagons.get(1);
         Train train1 = new Train(new Locomotive(10));
         train1.addWagon(wagon);
@@ -77,11 +77,39 @@ public class TrainTest {
         expected.add(wagon);
         List<Wagon> actual = train1.getWagons();
 
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void addWagon_TRAIN_OVERFLOW() {
+        Train train1 = new Train(new Locomotive(10));
+        Wagon wagon = wagonFactory.generateWagon();
+        train1.addWagons(wagons);
+        train1.addWagon(wagon);
+        List<Wagon> expected = new ArrayList<Wagon>();
+        expected.addAll(wagons);
+        expected.add(wagon);
+        List<Wagon> actual = train1.getWagons();
+
+        assertNotEquals(expected, actual);
+    }
+
+    @Test
+    public void addWagon_CONTAINS_SAME() {
+        Wagon wagon = wagons.get(1);
+        Wagon wagon1 = wagons.get(1);
+        Train train1 = new Train(new Locomotive(10));
+        train1.addWagon(wagon);
+        train1.addWagon(wagon1);
+        List<Wagon> expected = new ArrayList<Wagon>();
+        expected.add(wagon);
+        List<Wagon> actual = train1.getWagons();
+
+        assertEquals(expected, actual);
     }
 
     @Test()
-    public void addWagons() {
+    public void addWagons_NOT_CONTAINS_SAME() {
         Wagon wagon = wagons.get(1);
         Wagon wagon1 = wagons.get(2);
         Wagon wagon2 = wagons.get(3);
@@ -97,22 +125,22 @@ public class TrainTest {
         expected.add(wagon2);
         List<Wagon> actual = train1.getWagons();
 
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
-//    @Test
-//    public void addWagons() {
-//        Wagon wagon = wagons.get(1);
-//        Wagon wagon1 = wagons.get(2);
-//        Wagon wagon2 = wagons.get(3);
-//        List<Wagon> addedWagons = new ArrayList<Wagon>();
-//        addedWagons.add(wagon);
-//        addedWagons.add(wagon1);
-//        addedWagons.add(wagon2);
-//        Train train1 = new Train(new Locomotive(10));
-//        train1.addWagons(addedWagons);
-//        List<Wagon> actual = train1.getWagons();
-//
-//        assertNotEquals(2,actual.size());
-//    }
+    @Test
+    public void addWagons_TRAIN_OVERFLOW() {
+        List<Wagon> wagonList = new ArrayList<Wagon>();
+        List<Wagon> expected = new ArrayList<Wagon>();
+        List<Wagon> actual = new ArrayList<Wagon>();
+        Wagon wagon = wagonFactory.generateWagon();
+        Wagon wagon1 = wagonFactory.generateWagon();
+        wagonList.add(wagon);
+        wagonList.add(wagon1);
+        expected.addAll(wagons);
+        expected.addAll(wagonList);
+        train.addWagons(wagonList);
+        actual = train.getWagons();
+        assertNotEquals(expected, actual);
+    }
 }

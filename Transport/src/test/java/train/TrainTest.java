@@ -8,6 +8,7 @@ import wagons.WagonFactory;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -16,7 +17,6 @@ public class TrainTest {
     Train train;
     List<Wagon> wagons;
     WagonFactory wagonFactory;
-    public static final Logger logger = Logger.getLogger(TrainTest.class);
 
     @Before
     public void setUp() throws Exception {
@@ -36,7 +36,7 @@ public class TrainTest {
     }
 
     @Test
-    public void removeWagon() {
+    public void removeWagon_CONTAINS_WAGON() {
         wagons.remove(5);
         List<Wagon> expected = wagons;
         train.removeWagon(train.getWagons().get(5));
@@ -44,17 +44,46 @@ public class TrainTest {
         assertEquals(expected, actual);
     }
 
+    @Test(expected = NullPointerException.class)
+    public void removeWagon_NOT_CONTAINS_WAGON() {
+        Wagon wagon = wagonFactory.generateWagon();
+        train.removeWagon(wagon);
+    }
+
+    @Test(expected = EmptyStackException.class)
+    public void removeWagon_FROM_EMPTY_LIST() {
+        Train train1 = new Train(new Locomotive(10));
+        train1.removeWagon(wagons.get(1));
+    }
+
     @Test
-    public void removeWagons() {
-        List<Wagon> lis4Delete = new ArrayList<Wagon>();
-        lis4Delete.add(train.getWagons().get(1));
-        lis4Delete.add(train.getWagons().get(5));
-        wagons.remove(lis4Delete.get(0));
-        wagons.remove(lis4Delete.get(1));
+    public void removeWagons_CONTAIN_WAGONS() {
+        List<Wagon> list4Delete = new ArrayList<Wagon>();
+        list4Delete.add(train.getWagons().get(1));
+        list4Delete.add(train.getWagons().get(5));
+        wagons.remove(list4Delete.get(0));
+        wagons.remove(list4Delete.get(1));
         List<Wagon> expected = wagons;
-        train.removeWagons(lis4Delete);
+        train.removeWagons(list4Delete);
         List<Wagon> actual = train.getWagons();
         assertEquals(expected, actual);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void removeWagons_NOT_CONTAIN_WAGONS() {
+        List<Wagon> list4Delete = new ArrayList<Wagon>();
+        Wagon wagon = wagonFactory.generateWagon();
+        Wagon wagon1 = wagonFactory.generateWagon();
+        list4Delete.add(wagon);
+        list4Delete.add(wagon1);
+        train.removeWagons(list4Delete);
+    }
+
+    @Test(expected = EmptyStackException.class)
+    public void removeWagons_FROM_EMPTY_LIST() {
+        Train train1 = new Train(new Locomotive(10));
+        train1.removeWagons(wagons);
+
     }
 
     @Test
@@ -66,6 +95,14 @@ public class TrainTest {
         actual = train.getWagons();
 
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getWagons_NOT_NULL() {
+        Train train = new Train(new Locomotive(10));
+        List<Wagon> actual = new ArrayList<Wagon>();
+        actual = train.getWagons();
+        assertNotNull(actual);
     }
 
     @Test

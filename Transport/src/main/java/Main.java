@@ -45,8 +45,9 @@ public class Main {
         Wagon wagon = randomWagonFactory.generateWagon();
         Train train1 = new Train(new Locomotive(10));
         train1.addWagon(wagon);
+        System.out.println("common passengers amount"+getCommonPassengerAmount(train));
     }
     //return exception version and complete logger
     //TODO: create packages with wagons
-    //todo: find out why doesn't work log4j.properties at resources
+
 }

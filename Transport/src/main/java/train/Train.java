@@ -75,11 +75,11 @@ public class Train {
                 if (isContains(this.wagons,wagon)) {
                     this.wagons.remove(wagon);
                 } else {
-                    System.out.println("Can't find wagon " + wagon.getNumber() + " in train " + name);
+                    throw new NullPointerException("Can't find wagon " + wagon.getNumber() + " in train " + name);
                 }
             }
         } else {
-            System.out.println("Train doesn't contain any wagons!");
+            throw new EmptyStackException();
         }
     }
         @Override

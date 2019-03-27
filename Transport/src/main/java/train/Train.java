@@ -13,7 +13,7 @@ public class Train {
     private Locomotive locomotive;
     private List<Wagon> wagons = new ArrayList<Wagon>();
 
-    public Train(Locomotive locomotive) {
+    public Train(Locomotive locomotive) throws IllegalArgumentException {
         this.locomotive = locomotive;
     }
 

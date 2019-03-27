@@ -103,12 +103,31 @@ public class TrainHelperTest {
     //todo: make this test
     @Test
     public void sortWagonsByConvenience() {
-        List<Wagon> expected = new ArrayList<Wagon>();
+        List<Wagon> expected = wagons;
         List<Wagon> actual = new ArrayList<Wagon>();
+        Collections.sort(expected,new Comparator<Wagon>() {
 
+            public int compare(Wagon o1, Wagon o2) {
+                int var1 = o1.getConvenience();
+                int var2 = o2.getConvenience();
+                if (var1 < var2) {
+                    return 1;
+                } else if (var1 > var2) {
+                    return -1;
+                } else return 0;
+            }
+        });
+
+        TrainHelper.sortWagonsByConvenience(train);
+        actual = train.getWagons();
+        assertEquals(expected,actual);
     }
 
     @Test
     public void isContains() {
+        Wagon wagon = wagons.get(1);
+        boolean isContains = false;
+        isContains = TrainHelper.isContains(train.getWagons(),wagon);
+        assertEquals(true,isContains);
     }
 }

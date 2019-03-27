@@ -1,0 +1,14 @@
+train\TrainHelper$1.class
+wagons\ReservedSeatWagonFactory.class
+wagons\WagonFactory.class
+train\Locomotive.class
+wagons\ReservedSeatWagon.class
+wagons\RandomWagonFactory.class
+wagons\Wagon.class
+wagons\CompartmentWagonFactory.class
+wagons\SedentaryWagon.class
+Main.class
+train\TrainHelper.class
+train\Train.class
+wagons\CompartmentWagon.class
+wagons\SedentaryWagonFactory.class

@@ -1,12 +1,6 @@
 package wagons;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Properties;
 import java.util.Random;
 
 public abstract class RandomWagonFactory {
@@ -34,6 +28,7 @@ public abstract class RandomWagonFactory {
 
     public Wagon generateWagon(){
         RandomWagonFactory wagonFactory = generateWagonFactory();
+        Wagon wagon;
 
         int randomAmountOfSeats = getRandomNumberInRange(10,50);
         int randomLuggageCapacity = getRandomNumberInRange(10,100);
@@ -54,10 +49,17 @@ public abstract class RandomWagonFactory {
             }
         }
 
+        try {
+            wagon = wagonFactory.createWagon(randomLuggageCapacity,randomAmountOfLuggage,randomAmountOfSeats,randomAmountOfPassengers);
+            return wagon;
+        }catch (IllegalAccessException ex){
+            logger.error(ex.getMessage());
+            return null;
+        }
 
-        return wagonFactory.createWagon(randomLuggageCapacity,randomAmountOfSeats,randomAmountOfLuggage,randomAmountOfPassengers);
+
     }
 
-    protected abstract Wagon createWagon(int luggageCapacity, int amountOfSeats, int amountOfLuggage, int amountOfPassengers);
+    protected abstract Wagon createWagon(int luggageCapacity, int amountOfLuggage, int amountOfSeats, int amountOfPassengers) throws IllegalAccessException;
 
 }

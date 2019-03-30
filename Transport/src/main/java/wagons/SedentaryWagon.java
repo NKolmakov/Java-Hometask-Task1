@@ -2,8 +2,8 @@ package wagons;
 
 class SedentaryWagon extends Wagon {
 
-    public SedentaryWagon( int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity) {
-        super(amountOfSeats, amountOfPassengers, amountOfLuggage, luggageCapacity);
+    public SedentaryWagon(int luggageCapacity, int amountOfLuggage, int amountOfSeats, int amountOfPassengers) throws IllegalAccessException {
+        super(luggageCapacity,amountOfLuggage,amountOfSeats,amountOfPassengers);
         this.type = "sedentary";
         this.convenience = 1;
     }

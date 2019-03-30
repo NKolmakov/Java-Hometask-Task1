@@ -2,7 +2,7 @@ package wagons;
 
 class CompartmentWagonFactory extends RandomWagonFactory {
 
-    public Wagon createWagon(int amountOfSeats, int amountOfPassengers, int amountOfLuggage, int luggageCapacity) {
-        return new CompartmentWagon(amountOfSeats,amountOfPassengers,amountOfLuggage,luggageCapacity);
+    public Wagon createWagon(int luggageCapacity,int amountOfLuggage,int amountOfSeats,int amountOfPassengers) throws IllegalAccessException {
+        return new CompartmentWagon(luggageCapacity,amountOfLuggage,amountOfSeats,amountOfPassengers);
     }
 }

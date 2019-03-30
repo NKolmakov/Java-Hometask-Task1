@@ -2,7 +2,7 @@ package wagons;
 
 public class WagonFactory extends RandomWagonFactory {
 
-    public Wagon createWagon(int luggageCapacity, int amountOfSeats, int amountOfLuggage, int amountOfPassengers) {
+    public Wagon createWagon(int luggageCapacity, int amountOfLuggage, int amountOfSeats, int amountOfPassengers) {
         return generateWagon();
     }
 

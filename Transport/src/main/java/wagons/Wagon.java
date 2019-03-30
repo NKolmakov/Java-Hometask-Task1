@@ -5,15 +5,14 @@ import org.apache.log4j.Logger;
 public abstract class Wagon {
     private int number;
     protected String type;
-    protected int convenience;
+    protected static int convenience;
     private int amountOfSeats;
     private int amountOfPassengers;
     private int amountOfLuggage;
     private int luggageCapacity;
 
     public static final Logger logger = Logger.getLogger(Wagon.class);
-    public Wagon(int luggageCapacity, int amountOfSeats, int amountOfLuggage, int amountOfPassengers) {
-        try {
+    public Wagon(int luggageCapacity, int amountOfLuggage , int amountOfSeats, int amountOfPassengers) throws IllegalAccessException {
             if (amountOfLuggage > luggageCapacity || amountOfPassengers > amountOfSeats){
                 throw new IllegalArgumentException("Amount of luggage can't be greater than luggage capacity &" +
                         "\namount of passengers can't be greater than amount of seats\n" +
@@ -28,11 +27,6 @@ public abstract class Wagon {
                 this.amountOfPassengers = amountOfPassengers;
                 this.amountOfLuggage = amountOfLuggage;
             }
-        } catch (IllegalArgumentException exception) {
-            logger.error("Uncorrect capacity!",exception);
-            this.number = -1;
-
-        }
     }
 
 
@@ -76,14 +70,15 @@ public abstract class Wagon {
 
     @Override
     public String toString(){
-        String info = "\nWagon "+number+"\n"+
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("\nWagon "+number+"\n"+
                 "\ttype: "+type+"\n"+
                 "\tConvenience: "+convenience+"\n"+
                 "\tAmount of seats: "+amountOfSeats+"\n" +
                 "\tAmount of passengers: "+amountOfPassengers+"\n" +
                 "\tAmount of luggage: "+amountOfLuggage +"\n" +
-                "\tLuggage capacity: "+luggageCapacity;
-       return info;
+                "\tLuggage capacity: "+luggageCapacity);
+       return stringBuffer.toString();
     }
 
 

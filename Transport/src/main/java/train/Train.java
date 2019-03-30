@@ -8,8 +8,12 @@ import java.util.EmptyStackException;
 import java.util.List;
 
 public class Train {
-    private String name;
     private int lastWagonNumber = 1; //helps to store information about last wagon number in the list
+
+    public Locomotive getLocomotive() {
+        return locomotive;
+    }
+
     private Locomotive locomotive;
     private List<Wagon> wagons = new ArrayList<Wagon>();
 
@@ -17,22 +21,8 @@ public class Train {
         this.locomotive = locomotive;
     }
 
-    public Train(String name, Locomotive locomotive) {
-        this.name = name;
-        this.locomotive = locomotive;
-
-    }
-
     public List<Wagon> getWagons() {
         return wagons;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public void addWagon (Wagon wagon) throws IllegalArgumentException,StackOverflowError {
@@ -75,7 +65,7 @@ public class Train {
                 if (isContains(this.wagons,wagon)) {
                     this.wagons.remove(wagon);
                 } else {
-                    throw new NullPointerException("Can't find wagon " + wagon.getNumber() + " in train " + name);
+                    throw new NullPointerException("Can't find wagon " + wagon.getNumber() + " in train ");
                 }
             }
         } else {
@@ -84,15 +74,16 @@ public class Train {
     }
         @Override
         public String toString () {
-            String trainInfo = "\nTrain: " + name + "\n";
+            StringBuffer trainInfo = new StringBuffer();
+            trainInfo.append( "\nTrain:\n");
             if (wagons.size() > 0) {
                 for (Wagon wagon : wagons) {
-                    trainInfo += wagon.toString() + "\n";
+                    trainInfo.append(wagon.toString() + "\n");
                 }
-            } else trainInfo += "No wagons";
+            } else trainInfo.append("No wagons");
 
 
-            return trainInfo;
+            return trainInfo.toString();
         }
 
     }

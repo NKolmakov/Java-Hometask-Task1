@@ -7,6 +7,7 @@ import wagons.Wagon;
 import wagons.WagonFactory;
 import org.apache.log4j.Logger;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.List;
@@ -36,7 +37,16 @@ public class TrainTest {
     }
 
     @Test
-    public void removeWagon_CONTAINS_WAGON() {
+    public void trainConstructor(){
+        Locomotive expected = new Locomotive(5);
+        Train train1 = new Train(expected);
+        Locomotive actual = train1.getLocomotive();
+        assertEquals(expected,actual);
+
+    }
+
+    @Test
+    public void removeWagon_contains_wagon() {
         wagons.remove(5);
         List<Wagon> expected = wagons;
         train.removeWagon(train.getWagons().get(5));
@@ -45,19 +55,19 @@ public class TrainTest {
     }
 
     @Test(expected = NullPointerException.class)
-    public void removeWagon_NOT_CONTAINS_WAGON() {
+    public void removeWagon_notContainWagons_getNullPointerException() {
         Wagon wagon = wagonFactory.generateWagon();
         train.removeWagon(wagon);
     }
 
     @Test(expected = EmptyStackException.class)
-    public void removeWagon_FROM_EMPTY_LIST() {
+    public void removeWagon_fromEmptyList_getEmptyStackException() {
         Train train1 = new Train(new Locomotive(10));
         train1.removeWagon(wagons.get(1));
     }
 
     @Test
-    public void removeWagons_CONTAIN_WAGONS() {
+    public void removeWagons_containWagons_passed() {
         List<Wagon> list4Delete = new ArrayList<Wagon>();
         list4Delete.add(train.getWagons().get(1));
         list4Delete.add(train.getWagons().get(5));
@@ -70,17 +80,18 @@ public class TrainTest {
     }
 
     @Test(expected = NullPointerException.class)
-    public void removeWagons_NOT_CONTAIN_WAGONS() {
+    public void removeWagons_notContainWagons_getNullPointerException() {
         List<Wagon> list4Delete = new ArrayList<Wagon>();
         Wagon wagon = wagonFactory.generateWagon();
         Wagon wagon1 = wagonFactory.generateWagon();
         list4Delete.add(wagon);
         list4Delete.add(wagon1);
         train.removeWagons(list4Delete);
+
     }
 
     @Test(expected = EmptyStackException.class)
-    public void removeWagons_FROM_EMPTY_LIST() {
+    public void removeWagons_fromEmptyList_getEmptyStackException() {
         Train train1 = new Train(new Locomotive(10));
         train1.removeWagons(wagons);
 
@@ -88,13 +99,7 @@ public class TrainTest {
 
     @Test
     public void getWagons() {
-        List<Wagon> expected = new ArrayList<Wagon>();
-        List<Wagon> actual = new ArrayList<Wagon>();
-
-        expected = wagons;
-        actual = train.getWagons();
-
-        assertEquals(expected, actual);
+        assertEquals(wagons, train.getWagons());
     }
 
     @Test
@@ -106,7 +111,7 @@ public class TrainTest {
     }
 
     @Test
-    public void addWagon_NO_TRAIN_OVERFLOW() {
+    public void addWagon_noTrainOverflow() {
         Wagon wagon = wagons.get(1);
         Train train1 = new Train(new Locomotive(10));
         train1.addWagon(wagon);
@@ -118,13 +123,13 @@ public class TrainTest {
     }
 
     @Test(expected = StackOverflowError.class)
-    public void addWagon_TRAIN_OVERFLOW() {
+    public void addWagon_trainOverflow_getStackOverflowError() {
         Wagon wagon = wagonFactory.generateWagon();
         train.addWagon(wagon);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void addWagon_CONTAINS_SAME() {
+    public void addWagon_containsWagon_getIllegalArgumentException() {
         Wagon wagon = wagons.get(1);
         Wagon wagon1 = wagons.get(1);
         Train train1 = new Train(new Locomotive(10));
@@ -185,4 +190,20 @@ public class TrainTest {
 
     }
 
+    @Test
+    public void toString_passed() {
+        String expected = train.toString();
+        String actual;
+
+        StringBuffer trainInfo = new StringBuffer();
+        trainInfo.append( "\nTrain:\n");
+        if (wagons.size() > 0) {
+            for (Wagon wagon : wagons) {
+                trainInfo.append(wagon.toString() + "\n");
+            }
+        } else trainInfo.append("No wagons");
+
+        actual = trainInfo.toString();
+        assertEquals(expected,actual);
+    }
 }

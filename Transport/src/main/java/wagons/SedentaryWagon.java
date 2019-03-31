@@ -6,6 +6,7 @@ class SedentaryWagon extends Wagon {
         super(luggageCapacity,amountOfLuggage,amountOfSeats,amountOfPassengers);
         this.type = "sedentary";
         this.convenience = 1;
+        logger.debug("Created sedentary wagon");
     }
 
 

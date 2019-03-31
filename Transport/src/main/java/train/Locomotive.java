@@ -9,7 +9,7 @@ public class Locomotive {
         if (tractionPower > 0) {
             this.tractionPower = tractionPower;
         } else {
-            logger.error("Illegal traction power");
+            logger.error("Illegal traction power: "+tractionPower);
             throw new IllegalArgumentException("Power must be greater then 0");
         }
     }

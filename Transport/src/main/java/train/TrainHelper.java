@@ -19,7 +19,6 @@ public class TrainHelper {
         for (Wagon wagon : train.getWagons()) {
             passengerAmount += wagon.getAmountOfPassengers();
         }
-        logger.info("Calculated passenger amount");
         return passengerAmount;
     }
 
@@ -32,17 +31,18 @@ public class TrainHelper {
     }
 
 
-    public static List<Wagon> findByPassengerAmount(int minRange, int maxRange, Train train) {
+    public static List<Wagon> findByPassengerAmount(int min, int max, Train train) throws IllegalArgumentException {
 
         List<Wagon> list4FendedWagons = new ArrayList<Wagon>();
-        if (minRange < maxRange && minRange >= 0 && maxRange >= 1) {
+        if (min < max && min >= 0 && max >= 1) {
             for (Wagon wagon : train.getWagons()) {
-                if (wagon.getAmountOfPassengers() >= minRange && wagon.getAmountOfPassengers() <= maxRange) {
+                if (wagon.getAmountOfPassengers() >= min && wagon.getAmountOfPassengers() <= max) {
                     list4FendedWagons.add(wagon);
                 }
             }
         } else {
-            throw new IllegalArgumentException("Invalid range!");
+            logger.error("Invalid arguments values");
+            throw new IllegalArgumentException("Invalid arguments values");
         }
         return list4FendedWagons;
 

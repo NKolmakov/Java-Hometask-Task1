@@ -11,7 +11,7 @@ import java.util.Comparator;
 import java.util.List;
 
 import static org.junit.Assert.*;
-import static wagons.RandomFinalWagonFactory.*;
+import static wagons.RandomWagonFactory.*;
 
 public class TrainHelperTest {
     Train train;
@@ -98,7 +98,6 @@ public class TrainHelperTest {
     }
 
 
-    //todo: make this test
     @Test
     public void sortWagonsByConvenience() {
         List<Wagon> expected = wagons;

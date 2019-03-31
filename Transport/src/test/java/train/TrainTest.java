@@ -10,7 +10,7 @@ import java.util.EmptyStackException;
 import java.util.List;
 
 import static org.junit.Assert.*;
-import static wagons.RandomFinalWagonFactory.generateWagon;
+import static wagons.RandomWagonFactory.generateWagon;
 
 public class TrainTest {
     Train train;

@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 public abstract class Wagon {
     private int number;
     protected String type;
-    protected static int convenience;
+    protected int convenience;
     private int amountOfSeats;
     private int amountOfPassengers;
     private int amountOfLuggage;

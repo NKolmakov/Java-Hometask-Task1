@@ -26,7 +26,7 @@ public final class RandomFinalWagonFactory {
 
     }
 
-    public Wagon generateWagon(){
+    public static Wagon generateWagon(){
         AbstractWagonFactory wagonFactory = generateWagonFactory();
         Wagon wagon;
 

@@ -4,7 +4,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import wagons.Wagon;
-import wagons.WagonFactory;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,20 +11,19 @@ import java.util.Comparator;
 import java.util.List;
 
 import static org.junit.Assert.*;
+import static wagons.RandomFinalWagonFactory.*;
 
 public class TrainHelperTest {
     Train train;
     List<Wagon> wagons;
-    WagonFactory wagonFactory;
 
     @Before
     public void setUp() throws Exception {
-        train = new Train(new Locomotive(10));
+        train = new Train(new Locomotive(40));
         wagons = new ArrayList<Wagon>();
-        wagonFactory = new WagonFactory();
 
-        for (int i = 0; i < 10; i++) {
-            wagons.add(wagonFactory.generateWagon());
+        for (int i = 0; i < train.getLocomotive().getTractionPower(); i++) {
+            wagons.add(generateWagon());
         }
 
         train.addWagons(wagons);
@@ -45,7 +43,7 @@ public class TrainHelperTest {
         assertEquals(expectedPassengerAmount,actualPassengerAmount);
     }
 
-    //don't know is this test required
+
     @Test
     public void getCommonPassengerAmount_EMPRY_LIST() {
         int expectedPassengerAmount = 0;

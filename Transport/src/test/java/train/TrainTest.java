@@ -4,29 +4,25 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import wagons.Wagon;
-import wagons.WagonFactory;
-import org.apache.log4j.Logger;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.List;
 
 import static org.junit.Assert.*;
+import static wagons.RandomFinalWagonFactory.generateWagon;
 
 public class TrainTest {
     Train train;
     List<Wagon> wagons;
-    WagonFactory wagonFactory;
 
     @Before
     public void setUp() throws Exception {
         train = new Train(new Locomotive(10));
         wagons = new ArrayList<Wagon>();
-        wagonFactory = new WagonFactory();
 
         for (int i = 0; i < 10; i++) {
-            wagons.add(wagonFactory.generateWagon());
+            wagons.add(generateWagon());
         }
 
         train.addWagons(wagons);
@@ -38,11 +34,6 @@ public class TrainTest {
 
     @Test
     public void trainConstructor() {
-//        Locomotive expected = new Locomotive(5);
-//        Train train1 = new Train(expected);
-//        Locomotive actual = train1.getLocomotive();
-//        assertEquals(expected,actual);
-
         Locomotive expected = new Locomotive(5);
         Train train1 = new Train(expected);
         Locomotive actual = train1.getLocomotive();
@@ -61,7 +52,7 @@ public class TrainTest {
 
     @Test(expected = NullPointerException.class)
     public void removeWagon_notContainWagons_getNullPointerException() {
-        Wagon wagon = wagonFactory.generateWagon();
+        Wagon wagon = generateWagon();
         train.removeWagon(wagon);
     }
 
@@ -87,8 +78,8 @@ public class TrainTest {
     @Test(expected = NullPointerException.class)
     public void removeWagons_notContainWagons_getNullPointerException() {
         List<Wagon> list4Delete = new ArrayList<Wagon>();
-        Wagon wagon = wagonFactory.generateWagon();
-        Wagon wagon1 = wagonFactory.generateWagon();
+        Wagon wagon = generateWagon();
+        Wagon wagon1 = generateWagon();
         list4Delete.add(wagon);
         list4Delete.add(wagon1);
         train.removeWagons(list4Delete);
@@ -129,7 +120,7 @@ public class TrainTest {
 
     @Test(expected = StackOverflowError.class)
     public void addWagon_trainOverflow_getStackOverflowError() {
-        Wagon wagon = wagonFactory.generateWagon();
+        Wagon wagon = generateWagon();
         train.addWagon(wagon);
     }
 
@@ -165,8 +156,8 @@ public class TrainTest {
     @Test(expected = StackOverflowError.class)
     public void addWagons_TRAIN_OVERFLOW() {
         List<Wagon> wagonList = new ArrayList<Wagon>();
-        Wagon wagon = wagonFactory.generateWagon();
-        Wagon wagon1 = wagonFactory.generateWagon();
+        Wagon wagon = generateWagon();
+        Wagon wagon1 = generateWagon();
         wagonList.add(wagon);
         wagonList.add(wagon1);
         train.addWagons(wagonList);
@@ -196,19 +187,26 @@ public class TrainTest {
     }
 
     @Test
-    public void toString_passed() {
+    public void toString_containWagons() {
         String expected = train.toString();
         String actual;
 
         StringBuffer trainInfo = new StringBuffer();
         trainInfo.append("\nTrain:\n");
-        if (wagons.size() > 0) {
             for (Wagon wagon : wagons) {
                 trainInfo.append(wagon.toString() + "\n");
             }
-        } else trainInfo.append("No wagons");
 
         actual = trainInfo.toString();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void toString_notContainWagons() {
+        Train train1 = new Train(new Locomotive(1));
+        String expected = train1.toString();
+        String actual = "\nTrain:\nNo wagons";
+
         assertEquals(expected, actual);
     }
 }

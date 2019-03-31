@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class WagonTest {
 
     Wagon wagon;
-    WagonFactory wagonFactory;
+
     @Before
     public void setUp() throws Exception {
         wagon = new ReservedSeatWagon(40,30,40,30);

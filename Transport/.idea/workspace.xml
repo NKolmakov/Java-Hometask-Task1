@@ -2,38 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4fac9f8-ba0d-489e-8482-6874742a094b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/train/LocomotiveTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wagons/AbstractWagonFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wagons/RandomFinalWagonFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/wagons/CompartmentWagonTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/wagons/WagonFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sadsf.suml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logging.log" beforeDir="false" afterPath="$PROJECT_DIR$/logging.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/train/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/train/Train.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wagons/CompartmentWagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wagons/CompartmentWagon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/wagons/CompartmentWagonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wagons/CompartmentWagonFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wagons/RandomWagonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wagons/RandomWagonFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wagons/ReservedSeatWagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wagons/ReservedSeatWagon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/wagons/ReservedSeatWagonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wagons/ReservedSeatWagonFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wagons/SedentaryWagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wagons/SedentaryWagon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/wagons/SedentaryWagonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wagons/SedentaryWagonFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wagons/Wagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wagons/Wagon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/wagons/WagonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wagons/WagonFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/train/TrainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/train/TrainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/wagons/WagonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wagons/WagonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/transport.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/train/Train.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/train/Train.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wagons/CompartmentWagon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wagons/CompartmentWagon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wagons/CompartmentWagonFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wagons/CompartmentWagonFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wagons/RandomWagonFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wagons/RandomWagonFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wagons/ReservedSeatWagon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wagons/ReservedSeatWagon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/wagons/ReservedSeatWagonFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wagons/ReservedSeatWagonFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wagons/SedentaryWagon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wagons/SedentaryWagon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wagons/SedentaryWagonFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wagons/SedentaryWagonFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wagons/Wagon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wagons/Wagon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wagons/WagonFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wagons/WagonFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-train.TrainHelperTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-train.TrainHelperTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-train.TrainTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-train.TrainTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-wagons.RandomWagonFactoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-wagons.RandomWagonFactoryTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-wagons.WagonTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-wagons.WagonTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/train.TrainHelperTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/train.TrainHelperTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/train.TrainTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/train.TrainTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/wagons.RandomWagonFactoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/wagons.RandomWagonFactoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/wagons.WagonTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/wagons.WagonTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/train/TrainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/train/TrainTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/wagons/WagonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/wagons/WagonTest.class" afterDir="false" />
     </list>
@@ -76,7 +76,7 @@
     <SUITE FILE_PATH="coverage/transport$TrainTest.ic" NAME="TrainTest Coverage Results" MODIFIED="1553957954097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>train.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/transport$All_in_transport.ic" NAME="All in transport Coverage Results" MODIFIED="1553958115320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/transport$All_in_transport.ic" NAME="All in transport Coverage Results" MODIFIED="1554026598459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/transport$WagonTest.ic" NAME="WagonTest Coverage Results" MODIFIED="1553962072113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>wagons.*</FILTER>
     </SUITE>
@@ -110,26 +110,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wagons/WagonFactory.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wagons/AbstractWagonFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+              <caret line="4" column="156" selection-start-line="4" selection-start-column="156" selection-end-line="4" selection-end-column="156" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wagons/ReservedSeatWagon.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wagons/RandomFinalWagonFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="33" />
+            <state relative-caret-position="316">
+              <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wagons/CompartmentWagon.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/train/TrainHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="78" selection-start-line="9" selection-start-column="78" selection-end-line="9" selection-end-column="78" />
+            <state relative-caret-position="799">
+              <caret line="68" column="44" lean-forward="true" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/train/Train.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,52 +155,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/wagons/WagonTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/train/LocomotiveTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding>
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
-                <element signature="e#1151#1152#0" expanded="true" />
-                <element signature="e#1181#1182#0" expanded="true" />
-                <element signature="e#1261#1262#0" expanded="true" />
-                <element signature="e#1291#1292#0" expanded="true" />
-                <element signature="e#1373#1374#0" expanded="true" />
-                <element signature="e#1403#1404#0" expanded="true" />
-                <element signature="e#1478#1479#0" expanded="true" />
-                <element signature="e#1508#1509#0" expanded="true" />
-                <element signature="e#1571#1572#0" expanded="true" />
-                <element signature="e#1601#1602#0" expanded="true" />
+                <element signature="e#195#196#0" expanded="true" />
+                <element signature="e#242#243#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wagons/Wagon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wagons/RandomWagonFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="52" column="133" selection-start-line="52" selection-start-column="133" selection-end-line="52" selection-end-column="133" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wagons/SedentaryWagonFactory.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/train/TrainHelperTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="109" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="109" />
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -190,8 +180,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wagons/ReservedSeatWagonFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="101" selection-start-line="5" selection-start-column="101" selection-end-line="5" selection-end-column="101" />
+            <state relative-caret-position="34">
+              <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wagons/SedentaryWagonFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -199,17 +198,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wagons/CompartmentWagonFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="100" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="100" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wagons/SedentaryWagon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="109" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="109" />
+            <state relative-caret-position="34">
+              <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -239,19 +229,22 @@
         <option value="$PROJECT_DIR$/src/test/java/wagons/RandomWagonFactoryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/train/LocomotiveTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/train/Train.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/test/java/train/TrainTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wagons/WagonFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wagons/RandomWagonFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/wagons/SedentaryWagon.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wagons/SedentaryWagonFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wagons/ReservedSeatWagonFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/wagons/ReservedSeatWagon.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wagons/CompartmentWagonFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/wagons/CompartmentWagon.java" />
         <option value="$PROJECT_DIR$/src/main/java/wagons/Wagon.java" />
         <option value="$PROJECT_DIR$/src/test/java/wagons/WagonTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/train/TrainTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/train/Train.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wagons/WagonFactoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wagons/RandomWagonFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wagons/WagonFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wagons/AbstractWagonFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wagons/CompartmentWagonFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wagons/ReservedSeatWagonFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wagons/SedentaryWagonFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wagons/RandomFinalWagonFactory.java" />
       </list>
     </option>
   </component>
@@ -294,6 +287,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -399,6 +394,13 @@
               <item name="Maven: junit:junit:4.12" type="70bed36:NamedLibraryElementNode" />
               <item name="junit-4.12.jar" type="462c0819:PsiDirectoryNode" />
               <item name="junit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: junit:junit:4.12" type="70bed36:NamedLibraryElementNode" />
+              <item name="junit-4.12.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="junit" type="462c0819:PsiDirectoryNode" />
               <item name="internal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -442,8 +444,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -461,15 +461,18 @@
       <recent name="wagons" />
       <recent name="train" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Nikolas\epam\Java-Hometask-Task1\Transport\src\test\resources" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Nikolas\epam\Java-Hometask-Task1\Transport\src\main\resources" />
+      <recent name="D:\Nikolas\epam\Java-Hometask-Task1\Transport" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="wagons" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Nikolas\epam\Java-Hometask-Task1\Transport\src\main\resources" />
-      <recent name="D:\Nikolas\epam\Java-Hometask-Task1\Transport" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Nikolas\epam\Java-Hometask-Task1\Transport\src\test\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -484,7 +487,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WagonTest.getAmountOfSeats">
+  <component name="RunManager" selected="JUnit.WagonFactoryTest.createWagon">
+    <configuration name="All in transport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="transport" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TrainTest.getWagons" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="transport" />
       <extension name="coverage">
@@ -498,6 +509,38 @@
       <option name="METHOD_NAME" value="getWagons" />
       <option name="TEST_OBJECT" value="method" />
       <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrainTest.trainConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="transport" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="train.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="train" />
+      <option name="MAIN_CLASS_NAME" value="train.TrainTest" />
+      <option name="METHOD_NAME" value="trainConstructor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WagonFactoryTest.createWagon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="transport" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="wagons.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="wagons" />
+      <option name="MAIN_CLASS_NAME" value="wagons.WagonFactoryTest" />
+      <option name="METHOD_NAME" value="createWagon" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -533,69 +576,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WagonTest.getLuggageCapacity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="transport" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="wagons.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="wagons" />
-      <option name="MAIN_CLASS_NAME" value="wagons.WagonTest" />
-      <option name="METHOD_NAME" value="getLuggageCapacity" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WagonTest.getNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="transport" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="wagons.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="wagons" />
-      <option name="MAIN_CLASS_NAME" value="wagons.WagonTest" />
-      <option name="METHOD_NAME" value="getNumber" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WagonTest.wagonConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="transport" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="wagons.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="wagons" />
-      <option name="MAIN_CLASS_NAME" value="wagons.WagonTest" />
-      <option name="METHOD_NAME" value="wagonConstructor" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="JUnit.TrainTest.getWagons" />
-      <item itemvalue="JUnit.WagonTest.wagonConstructor" />
       <item itemvalue="JUnit.WagonTest" />
-      <item itemvalue="JUnit.WagonTest.getNumber" />
-      <item itemvalue="JUnit.WagonTest.getLuggageCapacity" />
       <item itemvalue="JUnit.WagonTest.getAmountOfSeats" />
+      <item itemvalue="JUnit.All in transport" />
+      <item itemvalue="JUnit.TrainTest.trainConstructor" />
+      <item itemvalue="JUnit.WagonFactoryTest.createWagon" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WagonFactoryTest.createWagon" />
+        <item itemvalue="JUnit.All in transport" />
+        <item itemvalue="JUnit.TrainTest.trainConstructor" />
         <item itemvalue="JUnit.WagonTest.getAmountOfSeats" />
         <item itemvalue="JUnit.WagonTest" />
-        <item itemvalue="JUnit.WagonTest.getNumber" />
-        <item itemvalue="JUnit.WagonTest.getLuggageCapacity" />
-        <item itemvalue="JUnit.WagonTest.wagonConstructor" />
       </list>
     </recent_temporary>
   </component>
@@ -621,12 +616,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WagonTest_wagonConstructor - 2019.03.30 at 18h 25m 58s.xml">
-      <configuration name="WagonTest.wagonConstructor" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WagonTest_wagonConstructor - 2019.03.30 at 18h 28m 24s.xml">
-      <configuration name="WagonTest.wagonConstructor" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="WagonTest_wagonConstructor - 2019.03.30 at 18h 28m 29s.xml">
       <configuration name="WagonTest.wagonConstructor" configurationId="JUnit" />
     </history-entry>
@@ -651,6 +640,12 @@
     <history-entry file="WagonTest_getNumber - 2019.03.30 at 19h 02m 09s.xml">
       <configuration name="WagonTest.getNumber" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_transport - 2019.03.31 at 13h 03m 24s.xml">
+      <configuration name="All in transport" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WagonFactoryTest_createWagon - 2019.03.31 at 13h 09m 05s.xml">
+      <configuration name="WagonFactoryTest.createWagon" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -663,15 +658,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2692802" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27249357" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info id="simpleUML" order="5" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32916668" />
+      <window_info id="simpleUML" order="5" weight="0.9807074" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32916668" />
@@ -683,15 +676,16 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32916668" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50096464" side_tool="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32916668" />
-      <window_info anchor="right" id="Coverage" sideWeight="0.5031056" side_tool="true" weight="0.32969153" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32916668" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Maven" order="5" sideWeight="0.49689442" weight="0.32969153" />
+      <window_info anchor="right" id="Maven" order="5" sideWeight="0.49689442" weight="0.32861736" />
       <window_info anchor="right" id="PlantUML" order="6" />
       <window_info anchor="right" id="Code Iris" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" sideWeight="0.5031056" side_tool="true" weight="0.32969153" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -709,13 +703,6 @@
     <entry file="file://$PROJECT_DIR$/logging.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/train/TrainHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="68" column="44" lean-forward="true" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -727,26 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/train/TrainHelperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/train/LocomotiveTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="e#195#196#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -771,34 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/train/TrainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="207" column="5" selection-start-line="207" selection-start-column="5" selection-end-line="207" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2078#2085#0" expanded="true" />
-            <element signature="e#2904#2905#0" expanded="true" />
-            <element signature="e#2967#2968#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/train/Train.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#350#351#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#392#399#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -853,24 +792,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/WagonFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/SedentaryWagon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="109" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/CompartmentWagonFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/ReservedSeatWagon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="100" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="100" />
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -884,10 +809,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/ReservedSeatWagonFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/wagons/CompartmentWagonTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="101" selection-start-line="5" selection-start-column="101" selection-end-line="5" selection-end-column="101" />
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -898,45 +823,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/SedentaryWagonFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="109" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/RandomWagonFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="52" column="133" selection-start-line="52" selection-start-column="133" selection-end-line="52" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/ReservedSeatWagon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/wagons/WagonTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
             <element signature="e#1151#1152#0" expanded="true" />
-            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
             <element signature="e#1261#1262#0" expanded="true" />
-            <element signature="e#1291#1292#0" expanded="true" />
+            <element signature="e#1323#1324#0" expanded="true" />
             <element signature="e#1373#1374#0" expanded="true" />
-            <element signature="e#1403#1404#0" expanded="true" />
+            <element signature="e#1432#1433#0" expanded="true" />
             <element signature="e#1478#1479#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
             <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1601#1602#0" expanded="true" />
+            <element signature="e#1631#1632#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wagons/WagonFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/SedentaryWagon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="109" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/train/TrainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/RandomWagonFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/WagonFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/CompartmentWagonFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/ReservedSeatWagonFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/SedentaryWagonFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="62" selection-start-line="2" selection-start-column="62" selection-end-line="2" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/AbstractWagonFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="156" selection-start-line="4" selection-start-column="156" selection-end-line="4" selection-end-column="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wagons/RandomFinalWagonFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/train/TrainHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="68" column="44" lean-forward="true" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/train/Train.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/train/LocomotiveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding>
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/train/TrainHelperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>

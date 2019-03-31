@@ -37,11 +37,16 @@ public class TrainTest {
     }
 
     @Test
-    public void trainConstructor(){
+    public void trainConstructor() {
+//        Locomotive expected = new Locomotive(5);
+//        Train train1 = new Train(expected);
+//        Locomotive actual = train1.getLocomotive();
+//        assertEquals(expected,actual);
+
         Locomotive expected = new Locomotive(5);
         Train train1 = new Train(expected);
         Locomotive actual = train1.getLocomotive();
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
 
     }
 
@@ -196,7 +201,7 @@ public class TrainTest {
         String actual;
 
         StringBuffer trainInfo = new StringBuffer();
-        trainInfo.append( "\nTrain:\n");
+        trainInfo.append("\nTrain:\n");
         if (wagons.size() > 0) {
             for (Wagon wagon : wagons) {
                 trainInfo.append(wagon.toString() + "\n");
@@ -204,6 +209,6 @@ public class TrainTest {
         } else trainInfo.append("No wagons");
 
         actual = trainInfo.toString();
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 }

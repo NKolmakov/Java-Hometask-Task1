@@ -113,3 +113,5 @@ amount of passengers can't be greater than amount of seats
 2019-03-30 18:54:12(Locomotive.java:<init>:12) ERROR Locomotive:12 - Illegal traction power
 2019-03-30 18:58:07(Locomotive.java:<init>:12) ERROR Locomotive:12 - Illegal traction power
 2019-03-30 18:58:56(Locomotive.java:<init>:12) ERROR Locomotive:12 - Illegal traction power
+2019-03-31 13:03:04(Locomotive.java:<init>:12) ERROR Locomotive:12 - Illegal traction power
+2019-03-31 13:03:22(Locomotive.java:<init>:12) ERROR Locomotive:12 - Illegal traction power

@@ -10,10 +10,6 @@ import java.util.List;
 public class Train {
     private int lastWagonNumber = 1; //helps to store information about last wagon number in the list
 
-    public Locomotive getLocomotive() {
-        return locomotive;
-    }
-
     private Locomotive locomotive;
     private List<Wagon> wagons = new ArrayList<Wagon>();
 
@@ -23,6 +19,9 @@ public class Train {
 
     public List<Wagon> getWagons() {
         return wagons;
+    }
+    public Locomotive getLocomotive() {
+        return locomotive;
     }
 
     public void addWagon (Wagon wagon) throws IllegalArgumentException,StackOverflowError {
